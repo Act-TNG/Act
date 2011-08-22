@@ -2,6 +2,8 @@
 use strict;
 use DBI;
 
+use lib 'lib';'
+
 use Act::Config;
 use Act::Database;
 
