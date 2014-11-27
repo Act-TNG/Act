@@ -7,19 +7,15 @@ table "talks";
 column "talk_id" => {
     data_type          => 'integer',
     is_auto_increment  => 1,
-    is_nullable        => 0,
     sequence           => 'talks_talk_id_seq',
 };
 
 column "conf_id" => {
     data_type          => 'text',
-    is_nullable        => 0,
 };
 
 column "user_id" => {
     data_type          => 'integer',
-    is_foreign_key     => 1,
-    is_nullable        => 0,
 };
 
 column "title" => {
@@ -50,19 +46,16 @@ column "duration" => {
 column "lightning" => {
     data_type          => 'boolean',
     default_value      => \"false",
-    is_nullable        => 0,
 };
 
 column "accepted" => {
     data_type          => 'boolean',
     default_value      => \"false",
-    is_nullable        => 0,
 };
 
 column "confirmed" => {
     data_type          => 'boolean',
     default_value      => \"false",
-    is_nullable        => 0,
 };
 
 column "comment" => {
@@ -82,7 +75,6 @@ column "datetime" => {
 
 column "track_id" => {
     data_type          => 'integer',
-    is_foreign_key     => 1,
     is_nullable        => 1,
 };
 

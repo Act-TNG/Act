@@ -7,18 +7,15 @@ table "users";
 column "user_id" => {
     data_type          => 'integer',
     is_auto_increment  => 1,
-    is_nullable        => 0,
     sequence           => 'users_user_id_seq',
 };
 
 column "login" => {
     data_type          => 'text',
-    is_nullable        => 0,
 };
 
 column "passwd" => {
     data_type          => 'text',
-    is_nullable        => 0,
 };
 
 column "session_id" => {
@@ -54,7 +51,6 @@ column "pseudonymous" => {
 
 column "country" => {
     data_type          => 'text',
-    is_nullable        => 0,
 };
 
 column "town" => {
@@ -79,13 +75,11 @@ column "pm_group_url" => {
 
 column "email" => {
     data_type          => 'text',
-    is_nullable        => 0,
 };
 
 column "email_hide" => {
     data_type          => 'boolean',
     default_value      => \"true",
-    is_nullable        => 0,
 };
 
 column "gpg_key_id" => {
@@ -125,7 +119,6 @@ column "language" => {
 
 column "timezone" => {
     data_type          => 'text',
-    is_nullable        => 0,
 };
 
 column "company" => {

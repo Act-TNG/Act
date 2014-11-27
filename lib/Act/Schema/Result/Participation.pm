@@ -6,13 +6,10 @@ table "participations";
 
 column "conf_id" => {
     data_type          => 'text',
-    is_nullable        => 0,
 };
 
 column "user_id" => {
     data_type          => 'integer',
-    is_foreign_key     => 1,
-    is_nullable        => 0,
 };
 
 column "tshirt_size" => {

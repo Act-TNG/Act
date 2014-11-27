@@ -7,19 +7,15 @@ table "order_items";
 column "item_id" => {
     data_type          => 'integer',
     is_auto_increment  => 1,
-    is_nullable        => 0,
     sequence           => 'order_items_item_id_seq',
 };
 
 column "order_id" => {
     data_type          => 'integer',
-    is_foreign_key     => 1,
-    is_nullable        => 0,
 };
 
 column "amount" => {
     data_type          => 'integer',
-    is_nullable        => 0,
 };
 
 column "name" => {
@@ -29,7 +25,6 @@ column "name" => {
 
 column "registration" => {
     data_type          => 'boolean',
-    is_nullable        => 0,
 };
 
 

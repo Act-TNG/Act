@@ -6,19 +6,14 @@ table "user_talks";
 
 column "user_id" => {
     data_type          => 'integer',
-    is_foreign_ke      => 1,
-    is_nullable        => 0,
 };
 
 column "conf_id" => {
     data_type          => 'text',
-    is_nullable        => 0,
 };
 
 column "talk_id" => {
     data_type          => 'integer',
-    is_foreign_key     => 1,
-    is_nullable        => 0,
 };
 
 
