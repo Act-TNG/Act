@@ -29,7 +29,8 @@ column "description" => {
 primary_key "track_id";
 
 has_many "talks" => "Act::Schema::Result::Talk",
-  { "foreign.track_id" => "self.track_id" },
-  { cascade_copy => 0, cascade_delete => 0 };
+    { "foreign.track_id" => "self.track_id" },
+    {},
+;
 
 1;

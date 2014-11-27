@@ -37,7 +37,8 @@ primary_key "news_item_id";
 unique_constraint "news_items_news_id_key" => ["news_id", "lang"];
 
 belongs_to "news" => "Act::Schema::Result::News",
-  { news_id => "news_id" },
-  { is_deferrable => 0, on_delete => "NO ACTION", on_update => "NO ACTION" };
+    { news_id => "news_id" },
+    {},
+;
 
 1;

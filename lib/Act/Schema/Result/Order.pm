@@ -50,15 +50,18 @@ column "type" => {
 primary_key "order_id";
 
 might_have "invoice" => "Act::Schema::Result::Invoice",
-  { "foreign.order_id" => "self.order_id" },
-  { cascade_copy => 0, cascade_delete => 0 };
+    { "foreign.order_id" => "self.order_id" },
+    {},
+;
 
 has_many "order_items" => "Act::Schema::Result::OrderItem",
-  { "foreign.order_id" => "self.order_id" },
-  { cascade_copy => 0, cascade_delete => 0 };
+    { "foreign.order_id" => "self.order_id" },
+    {},
+;
 
 belongs_to "user" => "Act::Schema::Result::User",
-  { user_id => "user_id" },
-  { is_deferrable => 0, on_delete => "NO ACTION", on_update => "NO ACTION" };
+    { user_id => "user_id" },
+    {},
+;
 
 1;

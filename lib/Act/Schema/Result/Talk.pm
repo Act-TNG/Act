@@ -102,18 +102,19 @@ primary_key "talk_id";
 belongs_to "track" => "Act::Schema::Result::Track",
     { track_id => "track_id" },
     {
-      is_deferrable => 0,
       join_type     => "LEFT",
       on_delete     => "SET NULL",
-      on_update     => "NO ACTION",
-    };
+    }
+;
 
 belongs_to "user" => "Act::Schema::Result::User",
     { user_id => "user_id" },
-    { is_deferrable => 0, on_delete => "NO ACTION", on_update => "NO ACTION" };
+    {},
+;
 
 has_many "user_talks" => "Act::Schema::Result::UserTalk",
     { "foreign.talk_id" => "self.talk_id" },
-    { cascade_copy => 0, cascade_delete => 0 };
+    {},
+;
 
 1;

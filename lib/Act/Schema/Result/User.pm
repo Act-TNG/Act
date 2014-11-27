@@ -155,23 +155,28 @@ unique_constraint "users_login" => ["login"];
 unique_constraint "users_session_id" => ["session_id"];
 
 has_many "orders" => "Act::Schema::Result::Order",
-  { "foreign.user_id" => "self.user_id" },
-  { cascade_copy => 0, cascade_delete => 0 };
+    { "foreign.user_id" => "self.user_id" },
+    {},
+;
 
 has_many "participations" => "Act::Schema::Result::Participation",
-  { "foreign.user_id" => "self.user_id" },
-  { cascade_copy => 0, cascade_delete => 0 };
+    { "foreign.user_id" => "self.user_id" },
+    {},
+;
 
 has_many "rights" => "Act::Schema::Result::Right",
-  { "foreign.user_id" => "self.user_id" },
-  { cascade_copy => 0, cascade_delete => 0 };
+    { "foreign.user_id" => "self.user_id" },
+    {},
+;
 
 has_many "talks" => "Act::Schema::Result::Talk",
-  { "foreign.user_id" => "self.user_id" },
-  { cascade_copy => 0, cascade_delete => 0 };
+    { "foreign.user_id" => "self.user_id" },
+    {},
+;
 
 has_many "user_talks" => "Act::Schema::Result::UserTalk",
-  { "foreign.user_id" => "self.user_id" },
-  { cascade_copy => 0, cascade_delete => 0 };
+    { "foreign.user_id" => "self.user_id" },
+    {},
+;
 
 1;

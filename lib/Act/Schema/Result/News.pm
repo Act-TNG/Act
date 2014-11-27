@@ -36,6 +36,7 @@ primary_key "news_id";
 
 has_many "news_items" => "Act::Schema::Result::NewsItem",
     { "foreign.news_id" => "self.news_id" },
-    { cascade_copy => 0, cascade_delete => 0 };
+    {},
+;
 
 1;
