@@ -1,0 +1,11 @@
+use warnings;
+use strict;
+
+use Act::Schema;
+
+# DO NOT add it to the main Schema class - it is not terribly well written
+Act::Schema->load_components('+DBIx::Class::Helpers::Schema::LintContents');
+
+my $s = Act::Schema->connect(...);
+
+die $s->null_check_source_auto->count;
