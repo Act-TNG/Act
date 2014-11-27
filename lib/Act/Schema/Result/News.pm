@@ -39,4 +39,9 @@ has_many "news_items" => "Act::Schema::Result::NewsItem",
     {},
 ;
 
+belongs_to "user" => "Act::Schema::Result::User",
+    { "foreign.user_id" => "self.user_id" },
+    {},
+;
+
 1;

@@ -21,9 +21,9 @@ column "bio" => {
 
 unique_constraint "bios_idx" => ["user_id", "lang"];
 
-# belongs_to "user" => "Act::Schema::Result::User",
-#     { user_id => "user_id" },
-#     {},
-#;
+belongs_to "user" => "Act::Schema::Result::User",
+    { user_id => "user_id" },
+    {},
+;
 
 1;
