@@ -24,12 +24,10 @@ column "datetime" => {
 
 column "means" => {
     data_type          => 'text',
-    is_nullable        => 1,
 };
 
 column "currency" => {
     data_type          => 'text',
-    is_nullable        => 1,
 };
 
 column "status" => {

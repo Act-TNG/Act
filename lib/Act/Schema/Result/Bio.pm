@@ -6,17 +6,14 @@ table "bios";
 
 column "user_id" => {
     data_type          => 'integer',
-    is_nullable        => 1,
 };
 
 column "lang" => {
     data_type          => 'text',
-    is_nullable        => 1,
 };
 
 column "bio" => {
     data_type          => 'text',
-    is_nullable        => 1,
 };
 
 unique_constraint "bios_idx" => ["user_id", "lang"];

@@ -30,7 +30,6 @@ column "salutation" => {
 
 column "first_name" => {
     data_type          => 'text',
-    is_nullable        => 1,
 };
 
 column "last_name" => {
@@ -46,7 +45,6 @@ column "nick_name" => {
 column "pseudonymous" => {
     data_type          => 'boolean',
     default_value      => \"false",
-    is_nullable        => 1,
 };
 
 column "country" => {

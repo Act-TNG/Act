@@ -28,17 +28,14 @@ column "amount" => {
 
 column "means" => {
     data_type          => 'text',
-    is_nullable        => 1,
 };
 
 column "currency" => {
     data_type          => 'text',
-    is_nullable        => 1,
 };
 
 column "first_name" => {
     data_type          => 'text',
-    is_nullable        => 1,
 };
 
 column "last_name" => {

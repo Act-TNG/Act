@@ -20,7 +20,6 @@ column "amount" => {
 
 column "name" => {
     data_type          => 'text',
-    is_nullable        => 1,
 };
 
 column "registration" => {
