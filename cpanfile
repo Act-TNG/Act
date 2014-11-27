@@ -1,4 +1,4 @@
-requires 'Dancer', '0.154000';
+requires 'Dancer2', '0.154000';
 requires 'Clone' => 0;
 requires 'DBI' => 0;
 requires 'Data::ICal' => '0.16'; # Data::ICal::Entry::Event
