@@ -1,0 +1,29 @@
+use warnings;
+use strict;
+
+use SQL::Translator;
+use Browser::Open 'open_browser';
+use Cwd 'abs_path';
+
+my $fn = abs_path( 'act-schema.svg' );
+
+my $trans = SQL::Translator->new(
+  parser        => 'SQL::Translator::Parser::DBIx::Class',
+  parser_args   => { dbic_schema => "Act::Schema", },
+  producer      => 'GraphViz',
+  producer_args => {
+    name              => '"Act Schema graph"',
+    output_type       => 'svg',
+    rankdir           => 'LR',
+    out_file          => $fn,
+    bgcolor           => 'lightgoldenrodyellow',
+    show_constraints  => 1,
+    show_datatypes    => 1,
+    show_indexes      => 0,
+    show_sizes        => 1,
+  },
+) or die SQL::Translator->error;
+
+$trans->translate or die $trans->error;
+
+open_browser("file://$fn");
