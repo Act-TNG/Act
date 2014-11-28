@@ -7,8 +7,9 @@ prefix '/:conf_id' => sub {
     get qr{^/talk/(\d+)$} => sub {
         my $talk_id = param('id');
         my $conf_id = param('conf_id');
+        my $act     = var('act');
 
-        my $talk = var('act')->find_talk({
+        my $talk = $act->find_talk({
             conf_id => $conf_id,
             talk_id => $talk_id,
         });
@@ -37,7 +38,7 @@ prefix '/:conf_id' => sub {
         $template->variables(
             chunked_abstract => Act::Abstract::chunked( $talk->abstract ),
             talk => $talk,
-            user => $user,
+            user => var('user'),
 
             # 'attendees' and 'tags' are derived from 'talk' object
         );

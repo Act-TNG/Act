@@ -1,7 +1,8 @@
 package Act::Web;
 use Dancer2;
-use Act::Web::Talk;
+use Act::API;
 use Act::Schema;
+use Act::Web::Talk;
 
 our $VERSION = '0.001';
 
