@@ -4,6 +4,7 @@ package Act::API;
 use Moo;
 use MooX::Types::MooseLike::Base qw<Str HashRef InstanceOf>;
 
+use Scalar::Util 'weaken';
 use Act::Schema;
 
 has dsn => (
@@ -26,6 +27,7 @@ has schema_options => (
 );
 
 sub _build_schema {
+    my $self = shift;
     return Act::Schema->connect( $self->dsn, $self->schema_options );
 }
 
@@ -37,6 +39,7 @@ sub add_tags_to_talk {
 
     foreach my $tag (@new_tags) {
         Act::Entity::Tag->new(
+            act     => $self,
             conf_id => $args->{'conf_id'},
             tag     => $tag,
             type    => 'talk',
