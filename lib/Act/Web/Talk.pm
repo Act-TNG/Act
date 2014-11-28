@@ -6,7 +6,7 @@ prefix '/:conf_id' => sub {
     # Act::Handler::Talk::Show
     post qr{^/talk/(\d+)$} => sub {
         my $talk_id = param('id');
-        my $conf_id = param('conf_id'}:
+        my $conf_id = param('conf_id');
         my $act     = var('act');
 
         my $talk = $act->find_talk({
