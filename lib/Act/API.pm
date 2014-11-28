@@ -4,7 +4,6 @@ package Act::API;
 use Moo;
 use MooX::Types::MooseLike::Base qw<Str HashRef InstanceOf>;
 
-use Scalar::Util 'weaken';
 use Act::Schema;
 
 has dsn => (
