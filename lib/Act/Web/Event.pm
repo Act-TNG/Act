@@ -19,6 +19,9 @@ get '/event' => sub {
     $template->process('event/show');
 };
 
+# aliasing
+get '/newevent' => sub { forward '/editevent' };
+
 # or: /event/edit
 get '/editevent' => sub {
     # we require act to even match
