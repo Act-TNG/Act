@@ -17,9 +17,13 @@ hook before => sub {
     }
 };
 
-get '/' => sub {
-    template 'index';
+# Catalyst-style dispatching
+# this will work with CPAN Dancer2, but just doesn't have nice syntax (yet!)
+any '/:conf_id/**' => sub {
+    my $conf_id = param('conf_id');
+    request->{'path'} =~ s/^\/$conf_id//;
+    set conf_id => $conf_id;
+    pass;
 };
 
 1;
-
