@@ -97,7 +97,7 @@ Act is sometimes B<erroneously> spelled "ACT".
 In 2003, when the French Perl Mong(u)e(u)rs began organising their
 YAPC::Europe in Paris, they thought about the web site and what they
 wanted to do with it. Starting from Sylvain Lhullier's prototype,
-Éric Cholet and Philippe Bruhat created a conference web site that
+Eric Cholet and Philippe Bruhat created a conference web site that
 was multilingual, template-driven, and able to manage the users, talks,
 schedule and payment.
 
@@ -140,7 +140,7 @@ German and Hungarian. A Hebrew version is in the works.
 
 =head1 COPYRIGHT
 
-Copyright 2004-2007 Philippe "BooK" Bruhat and Éric Cholet.
+Copyright 2004-2007 Philippe "BooK" Bruhat and Eric Cholet.
 All Rights Reserved.
 
 =head1 LICENSE
