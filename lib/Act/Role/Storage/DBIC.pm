@@ -7,15 +7,15 @@ use Moo::Role;
 
 has _schema => ( is => 'lazy' );
 
-has _entity_to_source => (
-    is      => 'ro',
-    default => { User => 'User', },
-);
-
 sub _build__schema {
     Act::Schema->connect(
         @{ shift->config->{endpoint} }{qw( uri user pass )} );
 }
+
+has _entity_to_source => (
+    is      => 'lazy',
+    default => sub { { User => 'User' } },
+);
 
 sub _search_rs {
     my ( $self, $entity_name, @args ) = @_;
