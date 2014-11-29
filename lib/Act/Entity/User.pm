@@ -8,7 +8,8 @@ with 'Act::Role::Entity',
 sub _build_legacy {
     my ($self) = @_;
     require Act::Legacy::User;
-    return Act::Legacy::User->new( $self->_legacy_data );
+    return Act::Legacy::User->new( act => $self->act,
+        %{ $self->_legacy_data } );
 }
 
 1;
