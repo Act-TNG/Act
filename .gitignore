@@ -11,3 +11,6 @@ wwwdocs/
 .*~
 *.swp
 inc/
+*.bak
+*.old
+Act-*.tar.gz
