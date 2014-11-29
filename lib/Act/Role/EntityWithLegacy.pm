@@ -1,4 +1,4 @@
-package Act::Role::WithLegacy;
+package Act::Role::EntityWithLegacy;
 
 use Moo::Role;
 
@@ -8,9 +8,9 @@ has legacy => (
     is => 'lazy',
 );
 
-has _legacy_data (
+has _legacy_data => (
     is      => 'ro',
-    default => {},
+    default => sub { {} },
 );
 
 1;
