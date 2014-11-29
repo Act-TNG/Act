@@ -1,10 +1,8 @@
 package Act::Role::Entity;
 
-has act => (
-    is       => 'ro',
-    required => 1,
-    weak_ref => 1,
-);
+use Moo::Role;
+
+with 'Act::Role::WithAct';
 
 sub save {
     my ($self) = @_;
