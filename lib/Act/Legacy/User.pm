@@ -1,6 +1,7 @@
 package Act::Legacy::User;
 
 use Digest::MD5 qw( md5_hex );
+use List::Util qw( first );
 use namespace::clean;
 
 use Moo;
