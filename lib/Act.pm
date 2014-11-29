@@ -3,6 +3,7 @@ package Act;
 use Path::Class;
 use File::HomeDir;
 use YAML::Tiny qw( LoadFile );
+use Module::Runtime qw( require_module );
 use namespace::clean;
 
 use Moo;
@@ -35,9 +36,15 @@ sub BUILD {
 # entities
 sub find_entities {
     my ( $self, $entity_name, @args ) = @_;
+    require_module("Act::Entity::$entity_name");
     return [
-        map "Act::Entity::$entity_name"->new($_),
-        shift->storage->search_raw( $entity_name, @args )
+        map "Act::Entity::$entity_name"->new(
+            act => $self,
+            "Act::Entity::$entity_name"->does('Act::Role::EntityWithLegacy')
+            ? ( _legacy_data => $_ )
+            : (%$_)
+        ),
+        shift->search_raw( $entity_name, @args )
     ];
 }
 
