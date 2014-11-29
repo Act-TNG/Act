@@ -8,3 +8,6 @@ var/
 conf/
 actdocs/
 wwwdocs/
+.*~
+*.swp
+inc/
