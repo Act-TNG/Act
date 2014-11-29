@@ -13,7 +13,8 @@ has _entity_to_source => (
 );
 
 sub _build__schema {
-    Act::Schema->connect( @{ shift->config }{qw( uri user pass )} );
+    Act::Schema->connect(
+        @{ shift->config->{endpoint} }{qw( uri user pass )} );
 }
 
 sub _search_rs {
