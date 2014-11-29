@@ -1,6 +1,7 @@
 package Act::Role::Storage::DBIC;
 
 use Act::Schema;
+use Module::Runtime qw( require_module );
 use namespace::clean;
 
 use Moo::Role;
@@ -25,9 +26,10 @@ sub _search_rs {
 
 sub search_raw {
     my ( $self, $entity_name, @args ) = @_;
+    require_module("Act::Transformer::$entity_name");
     return $self->_search_rs( $entity_name, @args )->search(
         {},
-        { result_class => "Act::Transformer::$entity_name"->new( $self->act ) }
+        { result_class => "Act::Transformer::$entity_name"->new( act => $self ) }
     )->all;
 }
 
