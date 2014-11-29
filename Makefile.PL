@@ -9,6 +9,10 @@ requires(
 'AppConfig' => 0, 
 'Clone' => 0, 
 'DBI' => 0, 
+'DBIx::Class' => 0,
+'DBIx::Class::Carp' => 0,
+'DBIx::Class::Candy' => 0,
+'namespace::clean' => 0,
 'DBD::Pg' => 1.22,
 'Data::ICal' => '0.16', # Data::ICal::Entry::Event
 'Data::ICal::DateTime' => 0,
