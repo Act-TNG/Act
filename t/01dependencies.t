@@ -74,7 +74,7 @@ for ( sort keys %required ) {
         if defined $first_in and $first_in <= 5.008003;
     if ( require_ok($_) ) {
         if (defined $required{$_}) {
-            my $version = eval '$' . $_. '::VERSION';
+            my $version = eval '$' . $_. '::VERSION' || 0;
             cmp_ok( version->new($version), 'ge', version->new($required{$_}),
                 "$_ v. $version >= $required{$_}" );
         }
