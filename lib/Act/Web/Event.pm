@@ -3,6 +3,9 @@ use Dancer2 appname => 'Act::Web';
 set auto_page => 1;
 
 use Act::Form;
+use Act::Abstract;
+use Act::Template::HTML;
+use DateTime::Format::Pg;
 
 my $form = Act::Form->new(
   required => [qw( title abstract )],
@@ -18,14 +21,28 @@ my $form = Act::Form->new(
 
 my $act = Act::API->new( port => config->{'api_port'} );
 
+# Act::Handler::Event::Show
 get '/event/:event_id' => sub {
     my $event = $act->event( param('event_id') );
     my $tags  = $act->tags( { event_id => $event->event_id } );
 
-    my $template = Act::Template->new();
-    $template->variables();
+    my $template = Act::Template::HTML->new();
+    $template->variables(
+        event => $event,
+        chunked_abstract => Act::Abstract::chunked( $event->abstract ),
+    );
+
     return $template->process('events/show');
 };
 
+# Act::Handler::Event::List
+get '/editevent' => sub {
+
+};
+
+# Act::Handler::Event::Show
+get '/newevent' => sub {
+
+};
 
 1;

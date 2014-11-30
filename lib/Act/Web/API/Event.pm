@@ -5,7 +5,6 @@ use Dancer2 appname => 'Act::Web::API';
 
 my $schema = config->{'schema'};
 
-# Act::Handler::Event::Show
 get '/event/:event_id' => sub {
     my $conf_id  = param('conf_id');
     my $event_id = param('event_id');
@@ -23,7 +22,6 @@ get '/event/:event_id' => sub {
     return $event;
 };
 
-# Act::Handler::Event::List
 get '/events' => sub {
     my $conf_id = param('conf_id');
     my @events  = $schema->resultset('Event')->search(
@@ -32,16 +30,6 @@ get '/events' => sub {
     )->all or send_error( 'Cannot find events', 404 );
 
     return { results => \@events };
-};
-
-# Act::Handler::Event::Edit
-get '/editevent' => sub {
-
-};
-
-# Act::Handler::Event::Show
-get '/newevent' => sub {
-
 };
 
 1;

@@ -8,6 +8,8 @@ use Try::Tiny;
 use HTTP::Tiny;
 use Act::Entity::Event;
 
+with 'Act::Abstract';
+
 has ua => (
     is      => 'ro',
     isa     => Object,
