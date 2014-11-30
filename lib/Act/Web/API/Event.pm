@@ -22,14 +22,14 @@ get '/event/:event_id' => sub {
     return $event;
 };
 
-get '/events' => sub {
+get '/event' => sub {
     my $conf_id = param('conf_id');
     my @events  = $schema->resultset('Event')->search(
         { conf_id      => $conf_id },
         { result_class => 'DBIx::Class::ResultClass::HashRefInflator' },
-    )->all or send_error( 'Cannot find events', 404 );
+    )->all;
 
-    return { results => \@events };
+    return { results => [@events] };
 };
 
 1;

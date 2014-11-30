@@ -12,15 +12,9 @@ has type => (
 );
 
 has items => (
-    is       => 'ro',
-    isa      => ArrayRef,
-    required => 1,
-);
-
-has scroller => (
-    is      => 'ro',
-    isa     => Bool,
-    default => sub {0},
+    is        => 'ro',
+    isa       => ArrayRef,
+    predicate => 'has_items',
 );
 
 has total => (
@@ -28,7 +22,7 @@ has total => (
     isa     => Int,
     default => sub {
         my $self = shift;
-        $self->scroller ? -1 : scalar @{ $self->items };
+        $self->has_items ? scalar @{ $self->items } : 0;
     },
 );
 

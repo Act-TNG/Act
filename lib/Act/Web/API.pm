@@ -1,8 +1,6 @@
 package Act::Web::API;
 # ABSTRACT: Web API interface to the Act system
 
-BEGIN { $ENV{'ACTHOME'} = '.' }
-
 use Dancer2;
 use Act::Schema;
 use Class::Load 'load_class';
@@ -23,7 +21,7 @@ my @classes = qw<
 set serializer => 'JSON';
 
 hook before => sub {
-    my $sid = '';
+    my $sid = ''; # XXX: where is this from again?
     var user => config->{'schema'}->resultset('User')->find(
         { session_id   => $sid },
         { result_class => 'DBIx::Class::ResultClass::HashRefInflator' },

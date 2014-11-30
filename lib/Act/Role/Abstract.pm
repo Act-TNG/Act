@@ -1,4 +1,4 @@
-package Act::Abstract;
+package Act::Role::Abstract;
 use Moo::Role;
 
 # turn talk:id / user:id into real talks/users
