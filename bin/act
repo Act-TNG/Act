@@ -1,0 +1,13 @@
+#!perl
+
+# stupid simple example that should be written in App::Cmd
+
+use strict;
+use warnings;
+use Act::API;
+use DDP;
+
+my $act   = Act::API->new( port => 5000 );
+my $event = $act->event( { conf_id => 'ya2008', event_id => 3 } );
+
+p $event;

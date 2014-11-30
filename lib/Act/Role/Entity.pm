@@ -1,12 +1,5 @@
 package Act::Role::Entity;
-
+# ABSTRACT: An Act entity role
 use Moo::Role;
-
-with 'Act::Role::WithAct';
-
-sub save {
-    my ($self) = @_;
-    $self->act->save_entity($self);
-}
 
 1;
