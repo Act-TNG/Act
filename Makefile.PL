@@ -8,6 +8,7 @@ requires(
 'Apache::Request' => 0, 
 'AppConfig' => 0, 
 'Clone' => 0, 
+'Config::INI::Reader' => 0,
 'DBI' => 0, 
 'DBIx::Class' => 0,
 'DBIx::Class::Carp' => 0,
