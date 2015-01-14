@@ -1,0 +1,18 @@
+META.yml
+MYMETA.json
+MYMETA.yml
+Makefile
+blib
+pm_to_blib
+var/
+conf/
+actdocs/
+wwwdocs/
+.*~
+# vi/vim swap file
+*.swp
+*.swo
+inc/
+*.bak
+*.old
+Act-*.tar.gz
