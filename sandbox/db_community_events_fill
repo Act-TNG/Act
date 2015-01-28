@@ -1,0 +1,82 @@
+#!/usr/bin/env perl
+
+binmode STDOUT, ":utf8";
+
+use FindBin;
+use lib "$FindBin::Bin/../lib";
+
+use Act::Config;
+use Act::Schema;
+
+my $ActSchema = Act::Schema->connect(
+  $Config->database_dsn,
+  $Config->database_user,
+  $Config->database_passwd,
+  undef
+);
+
+$ActSchema->deploy( { sources => [ 'CommunityEvent' ] } );
+
+my $community_events_list = $ActSchema
+  ->resultset('CommunityEvent')
+  ->populate([
+  { conf_id =>   "ye2009", syndicate => "yapc-eu", edition => "2009" },
+  { conf_id =>   "ye2010", syndicate => "yapc-eu", edition => "2010" },
+  { conf_id =>   "ye2011", syndicate => "yapc-eu", edition => "2011" },
+  { conf_id =>   "yn2009", syndicate => "yapc-na", edition => "2009" },
+  { conf_id =>   "yn2010", syndicate => "yapc-na", edition => "2010" },
+  { conf_id =>   "yn2011", syndicate => "yapc-na", edition => "2011" },
+  { conf_id =>  "bpw2011", syndicate => "bpw",     edition => "2011" },
+  { conf_id =>  "fpw2009", syndicate => "fpw",     edition => "2009" },
+  { conf_id =>  "fpw2010", syndicate => "fpw",     edition => "2010" },
+  { conf_id =>  "fpw2011", syndicate => "fpw",     edition => "2011" },
+  { conf_id =>  "fpw2012", syndicate => "fpw",     edition => "2012" },
+  { conf_id =>  "gpw2009", syndicate => "gpw",     edition => "2009" },
+  { conf_id =>  "mpw2009", syndicate => "mpw",     edition => "2009" },
+  { conf_id =>  "mpw2010", syndicate => "mpw",     edition => "2010" },
+  { conf_id => "mtmh2012", syndicate => "mtmh",    edition => "2012" },
+  { conf_id => "nlpw2009", syndicate => "nlpw",    edition => "2009" },
+  { conf_id => "nlpw2011", syndicate => "nlpw",    edition => "2011" },
+  { conf_id => "nlpw2012", syndicate => "nlpw",    edition => "2012" },
+  { conf_id =>  "npw2009", syndicate => "npw",     edition => "2009" },
+  ]);
+
+__END__
+
+my $talks_set = $ActSchema
+  ->resultset('Talk')
+  ->search( undef, { order_by => 'talk_id' });
+
+# use DDP; p $talks_set;
+
+my $talk;
+my $talk__abstract;
+
+# format STDOUT_TOP =
+# _______________________________________________________________________
+# .
+
+format STDOUT =
+talk_id   : @>>>>>>>>>> title     : @<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<...
+            $talk->talk_id,         $talk->title    
+conf_id   : @>>>>>>>>>>
+            $talk->conf_id
+user_id   : @>>>>>>>>>> login     : @<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<...
+            $talk->user_id,         $talk->user->login
+language  : @<<<<<<<<<<
+            $talk->lang
+abstract  : ^<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+            $talk__abstract
+            ^<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< ~~
+            $talk__abstract
+duration  : @>>>>> mins
+
+
+.
+
+while ( $talk = $talks_set->next ) {
+  $talk__abstract = $talk->abstract;
+  write ();
+};
+
+

@@ -1,5 +1,7 @@
 #!/usr/bin/env perl
 
+binmode STDOUT, ":utf8";
+
 use FindBin;
 use lib "$FindBin::Bin/../lib";
 
@@ -7,27 +9,46 @@ use Act::Config;
 use Act::Schema;
 
 my $ActSchema = Act::Schema->connect(
-  $Config->database_test_dsn,
-  $Config->database_test_user,
-  $Config->database_test_passwd,
+  $Config->database_dsn,
+  $Config->database_user,
+  $Config->database_passwd,
   undef
 );
 
 my $talks_set = $ActSchema
   ->resultset('Talk')
-  ->search( {
-    user_id => 1,
-  }
-  );
+  ->search( undef, { order_by => 'talk_id' });
 
-use DDP; p $talks_set;
+# use DDP; p $talks_set;
 
-print "talks list:\n";
-while ( $talks_set->next ) {
-  print $_->title, "\n";
+my $talk;
+my $talk__abstract;
+
+# format STDOUT_TOP =
+# _______________________________________________________________________
+# .
+
+format STDOUT =
+talk_id   : @>>>>>>>>>> title     : @<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<...
+            $talk->talk_id,         $talk->title    
+conf_id   : @>>>>>>>>>>
+            $talk->conf_id
+user_id   : @>>>>>>>>>> login     : @<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<...
+            $talk->user_id,         $talk->user->login
+language  : @<<<<<<<<<<
+            $talk->lang
+abstract  : ^<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+            $talk__abstract
+            ^<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< ~~
+            $talk__abstract
+duration  : @>>>>> mins
+
+
+.
+
+while ( $talk = $talks_set->next ) {
+  $talk__abstract = $talk->abstract;
+  write ();
 };
-print "talks total", $talks_set->count;
 
-
-	
 
