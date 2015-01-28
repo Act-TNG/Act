@@ -1,0 +1,33 @@
+#!/usr/bin/env perl
+
+use FindBin;
+use lib "$FindBin::Bin/../lib";
+
+use Act::Config;
+use Act::Schema;
+
+my $ActSchema = Act::Schema->connect(
+  $Config->database_test_dsn,
+  $Config->database_test_user,
+  $Config->database_test_passwd,
+  undef
+);
+
+my $talks_set = $ActSchema
+  ->resultset('Talk')
+  ->search( {
+    user_id => 1,
+  }
+  );
+
+use DDP; p $talks_set;
+
+print "talks list:\n";
+while ( $talks_set->next ) {
+  print $_->title, "\n";
+};
+print "talks total", $talks_set->count;
+
+
+	
+

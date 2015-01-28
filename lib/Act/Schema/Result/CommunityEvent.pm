@@ -14,7 +14,7 @@ An object that will be the 'root' to which most of the other object are related
 
 =cut
 
-table "community_events"
+table "community_events";
 
 =head1 ACCESSORS
 
