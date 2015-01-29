@@ -75,6 +75,20 @@ primary_key "track_id";
 
 =head1 RELATIONS
 
+=head2 community_event
+
+belongs_to related object: L<Act::Schema::Result::CommunityEvent>
+
+=cut
+
+belongs_to "community_event" => "Act::Schema::Result::CommunityEvent",
+    { conf_id => "conf_id" },
+    {
+      join_type     => "LEFT",
+      on_delete     => "SET NULL",
+    }
+;
+
 =head2 talks
 
 has_many related object: L<Act::Schema::Result::Talk>
@@ -88,7 +102,7 @@ has_many "talks" => "Act::Schema::Result::Talk",
 
 =head1 COPYRIGHT
 
-(c) 2014 - Th.J. van Hoesel - THEMA-MEDIA NL
+(c) 2015 - Th.J. van Hoesel - THEMA-MEDIA NL
 
 =cut
 

@@ -98,6 +98,20 @@ column "attended" => {
 
 =head1 RELATIONS
 
+=head2 community_event
+
+belongs_to related object: L<Act::Schema::Result::CommunityEvent>
+
+=cut
+
+belongs_to "community_event" => "Act::Schema::Result::CommunityEvent",
+    { conf_id => "conf_id" },
+    {
+      join_type     => "LEFT",
+      on_delete     => "SET NULL",
+    }
+;
+
 =head2 user
 
 belongs_to related object: L<Act::Schema::Result::User>
