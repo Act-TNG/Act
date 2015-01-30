@@ -321,6 +321,30 @@ column "vat" => {
     is_nullable        => 1,
 };
 
+=head1 METHODS
+
+=head2 full_name
+
+First and Last name
+
+=cut
+
+sub full_name {
+    my $self = shift;
+    return join ' ', $self->first_name, $self->last_name;
+};
+
+=head2 public_name
+
+Name used in public, either the nickname or the fullname
+
+=cut
+
+sub public_name {
+    my $self = shift;
+    return $self->pseudonymous ? $self->nick_name : $self->full_name;
+};
+
 =head1 PRIMARY KEY
 
 =over 4
@@ -360,6 +384,28 @@ unique_constraint "users_login" => ["login"];
 unique_constraint "users_session_id" => ["session_id"];
 
 =head1 RELATIONS
+
+=head2 bios
+
+has_many related object: L<Act::Schema::Result::Bio>
+
+=cut
+
+has_many "bios" => "Act::Schema::Result::Bio",
+    { "foreign.user_id" => "self.user_id" },
+    {},
+;
+
+=head2 news
+
+has_many related object: L<Act::Schema::Result::News>
+
+=cut
+
+has_many "news" => "Act::Schema::Result::News",
+    { "foreign.user_id" => "self.user_id" },
+    {},
+;
 
 =head2 orders
 

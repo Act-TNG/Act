@@ -23,31 +23,40 @@ my $talks_set = $ActSchema
 
 my $talk;
 my $talk__abstract;
+my $talk__syndicate;
+my $talk__edition;
+my $talk__user;
 
 # format STDOUT_TOP =
 # _______________________________________________________________________
 # .
 
 format STDOUT =
-talk_id   : @>>>>>>>>>> title     : @<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<...
+Talk_id   : @>>>>>>>>>> Title     : @<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<...
             $talk->talk_id,         $talk->title    
-conf_id   : @>>>>>>>>>>
-            $talk->conf_id
-user_id   : @>>>>>>>>>> login     : @<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<...
-            $talk->user_id,         $talk->user->login
-language  : @<<<<<<<<<<
+Conf_id   : @>>>>>>>>>> Syndicate : @<<<<<<<<<< Edition   : @<<<<<<<<<<
+            $talk->conf_id,         $talk__syndicate,     $talk__edition
+User_id   : @>>>>>>>>>> Full Name : @<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<...
+            $talk->user_id,         $talk__user
+Language  : @<<<<<<<<<<
             $talk->lang
-abstract  : ^<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Abstract  : ^<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
             $talk__abstract
             ^<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< ~~
             $talk__abstract
-duration  : @>>>>> mins
+Duration  : @>>>>> mins
 
 
 .
 
 while ( $talk = $talks_set->next ) {
-  $talk__abstract = $talk->abstract;
+  $talk__abstract  = $talk->abstract;
+  $talk__syndicate = $talk->community_event
+    ? $talk->community_event->syndicate : '---';
+  $talk__edition   = $talk->community_event
+    ? $talk->community_event->edition : '---';
+  $talk__user       = $talk->user ?
+    $talk->user->full_name : '---';
   write ();
 };
 

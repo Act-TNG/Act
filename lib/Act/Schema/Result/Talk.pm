@@ -246,7 +246,7 @@ belongs_to related object: L<Act::Schema::Result::Track>
 belongs_to "track" => "Act::Schema::Result::Track",
     { track_id => "track_id" },
     {
-      join_type     => "LEFT",
+#     join_type     => "LEFT",
       on_delete     => "SET NULL",
     }
 ;
