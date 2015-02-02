@@ -1,34 +1,22 @@
-package Act::Schema::Result::CommunityEvent;
+package Act::Schema::Result::Conference;
 use utf8;
 use Act::Schema::Candy;
 
 =head1 NAME
 
-Act::Schema::Result::CommunityEvent
+Act::Schema::Result::Conference
 
 =head1 DESCRIPTION
 
 An object that will be the 'root' to which most of the other object are related
 
-=head1 TABLE: C<community_events>
+=head1 TABLE: C<conferences>
 
 =cut
 
-table "community_events";
+table "conferences";
 
 =head1 ACCESSORS
-
-=head2 community_event_id
-
-Primary key for community events, to be able to move away form 'user defined' keys
-
-=cut
-
-column "community_event_id" => {
-    data_type          => 'integer',
-    is_auto_increment  => 1,
-    sequence           => 'community_events_community_event_id_seq',
-};
 
 =head2 conf_id
 
@@ -71,17 +59,17 @@ This will also the 'hookup' for settings, to make dynamicly setting through the 
 
 =over 4
 
-=item * L</community_event_id>
+=item * L</conf_id>
 
 =back
 
 =cut
 
-primary_key "community_event_id";
+primary_key "conf_id";
 
 =head1 UNIQUE CONSTRAINTS
 
-=head2 C<community_events_syndicate_edition_key>
+=head2 C<conferences_syndicate_edition_key>
 
 =over 4
 
@@ -93,7 +81,7 @@ primary_key "community_event_id";
 
 =cut
 
-unique_constraint "community_events_syndicate_edition_key" => ["syndicate", "edition"];
+unique_constraint "conferences_syndicate_edition_key" => ["syndicate", "edition"];
 
 =head1 RELATIONS
 

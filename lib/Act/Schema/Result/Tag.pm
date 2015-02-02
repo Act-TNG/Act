@@ -80,13 +80,13 @@ primary_key "tag_id";
 
 =head1 RELATIONS
 
-=head2 community_event
+=head2 conference
 
-belongs_to related object: L<Act::Schema::Result::CommunityEvent>
+belongs_to related object: L<Act::Schema::Result::Conference>
 
 =cut
 
-belongs_to "community_event" => "Act::Schema::Result::CommunityEvent",
+belongs_to "conference" => "Act::Schema::Result::Conference",
     { conf_id => "conf_id" },
     {
       join_type     => "LEFT",

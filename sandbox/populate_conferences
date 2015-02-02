@@ -15,10 +15,10 @@ my $ActSchema = Act::Schema->connect(
   undef
 );
 
-$ActSchema->deploy( { sources => [ 'CommunityEvent' ] } );
+$ActSchema->deploy( { sources => [ 'Conference' ] } );
 
-my $community_events_list = $ActSchema
-  ->resultset('CommunityEvent')
+my $conference_list = $ActSchema
+  ->resultset('Conference')
   ->populate([
   { conf_id =>   "ye2009", syndicate => "yapc-eu", edition => "2009" },
   { conf_id =>   "ye2010", syndicate => "yapc-eu", edition => "2010" },
@@ -46,8 +46,6 @@ __END__
 my $talks_set = $ActSchema
   ->resultset('Talk')
   ->search( undef, { order_by => 'talk_id' });
-
-# use DDP; p $talks_set;
 
 my $talk;
 my $talk__abstract;

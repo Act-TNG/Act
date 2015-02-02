@@ -51,10 +51,10 @@ Duration  : @>>>>> mins
 
 while ( $talk = $talks_set->next ) {
   $talk__abstract  = $talk->abstract;
-  $talk__syndicate = $talk->community_event
-    ? $talk->community_event->syndicate : '---';
-  $talk__edition   = $talk->community_event
-    ? $talk->community_event->edition : '---';
+  $talk__syndicate = $talk->conference
+    ? $talk->conference->syndicate : '---';
+  $talk__edition   = $talk->conference
+    ? $talk->conference->edition : '---';
   $talk__user       = $talk->user ?
     $talk->user->full_name : '---';
   write ();

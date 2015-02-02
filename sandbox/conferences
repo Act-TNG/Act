@@ -1,0 +1,49 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+
+binmode STDOUT, ":utf8";
+
+use FindBin;
+use lib "$FindBin::Bin/../lib";
+
+use Act::Config;
+use Act::Schema;
+
+my $ActSchema = Act::Schema->connect(
+  $Config->database_dsn,
+  $Config->database_user,
+  $Config->database_passwd,
+  undef
+);
+
+
+my $conferences_set = $ActSchema
+  ->resultset('Conference')
+  ->search( undef, { order_by => 'edition' });
+
+use DDP; p 
+
+my $conference;
+my $conference__title = '<< undef >>';
+
+# format STDOUT_TOP =
+# _______________________________________________________________________
+# .
+
+format STDOUT =
+conf_id   : @>>>>>>>>>> title     : @<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<...
+            $conference->conf_id,   $conference__title
+                        syndicate : @<<<<<<<<<< edition   : @<<<<<<<<<<
+                                    $conference->syndicate, $conference->edition
+
+
+.
+
+while ( $conference = $conferences_set->next ) {
+# $conference__title = $conference->title;
+  write ();
+};
+
+
