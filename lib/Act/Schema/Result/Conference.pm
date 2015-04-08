@@ -8,7 +8,10 @@ Act::Schema::Result::Conference
 
 =head1 DESCRIPTION
 
-An object that will be the 'root' to which most of the other object are related
+An object that will be the 'root' to which most of the other object are related.
+
+Most data about a conference is being kept in config.ini files over the
+file-system. L<Act::Schema::Result::Config> will store the actual data.
 
 =head1 TABLE: C<conferences>
 
@@ -48,12 +51,6 @@ An edition is a delegated community event, under authority of previous mentioned
 column "edition" => {
     data_type          => 'text',
 };
-
-=head2 ... more will possibly come
-
-This will also the 'hookup' for settings, to make dynamicly setting through the API possible
-
-=cut
 
 =head1 PRIMARY KEY
 

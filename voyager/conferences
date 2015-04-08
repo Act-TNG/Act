@@ -23,23 +23,19 @@ my $conferences_set = $ActSchema
   ->resultset('Conference')
   ->search( undef, { order_by => 'edition' });
 
-use DDP; p 
-
 my $conference;
-my $conference__title = '<< undef >>';
+my $conference__title = '<< ?? >>';
 
-# format STDOUT_TOP =
-# _______________________________________________________________________
-# .
+format STDOUT_TOP =
+conf_id     syndicate   edition     title                              
+_______________________________________________________________________
+.
 
 format STDOUT =
-conf_id   : @>>>>>>>>>> title     : @<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<...
-            $conference->conf_id,   $conference__title
-                        syndicate : @<<<<<<<<<< edition   : @<<<<<<<<<<
-                                    $conference->syndicate, $conference->edition
-
-
+@<<<<<<<<<< @<<<<<<<<<< @<<<<<<<<<< @<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<...
+$conference->conf_id, $conference->syndicate, $conference->edition, $conference__title
 .
+
 
 while ( $conference = $conferences_set->next ) {
 # $conference__title = $conference->title;
