@@ -32,9 +32,6 @@ on_plugin_import {
             my $evnt = $ActSchema->resultset('Conference')->find( {
                 conf_id => $dsl->request->header('x-act-conference') || 0,
             } );
-use Carp; carp 'vvvv event';
-use DDP; p $evnt;
-use Carp; carp '^^^^ event';
         },
     ));
 };

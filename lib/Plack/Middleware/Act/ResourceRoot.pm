@@ -23,6 +23,8 @@ sub call {
     # is there a list of events for this syndicate
     #
     
+    my $request_path = $rqst->{PATH_INFO};
+    
     $chck = exists $rqst->{HTTP_X_ACT_SYNDICATE}
     ? $rqst->{HTTP_X_ACT_SYNDICATE}
     : ($rqst->{PATH_INFO} =~ /^\/([-\w]+).*/)[0]; # first element of path
@@ -64,6 +66,9 @@ sub call {
     $rqst->{HTTP_X_ACT_CONFERENCE} = $evnt->conf_id; # no need to lookup again
     
     RESPONSE:
+    
+    $rqst->{PATH_INFO} = $request_path; # not sure if we want to restore it
+    
     my $resp = $self->app->($rqst);    
     Plack::Util::response_cb(
         $resp => sub {
