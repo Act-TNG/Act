@@ -31,6 +31,16 @@ column "conf_id" => {
     data_type          => 'text',
 };
 
+=head2 url
+
+Main conference website
+
+=cut
+
+column "url" => {
+    data_type          => 'text',
+};
+
 =head2 syndicate
 
 Act enables delegation of administration, a syndicate can autonomous create instances
@@ -49,6 +59,76 @@ An edition is a delegated community event, under authority of previous mentioned
 =cut
 
 column "edition" => {
+    data_type          => 'text',
+};
+
+=head2 name
+
+Conference name
+
+=cut
+
+column "name" => {
+    data_type          => 'text',
+};
+
+=head2 nickname
+
+Conference nick name
+
+=cut
+
+column "nickname" => {
+    data_type          => 'text',
+};
+
+=head2 theme
+
+Conference Theme
+
+=cut
+
+column "theme" => {
+    data_type          => 'text',
+};
+
+=head2 genre
+
+Genre : workshop | hackathon | yapc | osdc
+
+=cut
+
+column "genre" => {
+    data_type          => 'text',
+};
+
+=head2 continent
+
+The continent on which the event is being held
+
+=cut
+
+column "continent" => {
+    data_type          => 'text',
+};
+
+=head2 country
+
+The country where the event is being held
+
+=cut
+
+column "country" => {
+    data_type          => 'text',
+};
+
+=head2 city
+
+The city where the event is being held
+
+=cut
+
+column "city" => {
     data_type          => 'text',
 };
 
