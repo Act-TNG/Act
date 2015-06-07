@@ -1,0 +1,16 @@
+#!/usr/bin/env perl
+
+use Dancer2;
+
+use strict;
+use warnings;
+
+use lib '../lib';
+
+use Dancer2::Plugin::HTTP::Auth::ActVoyager;
+
+get '/user/:id' => http_require_can 'lookup_user' => sub {
+    return http_auth_handler->lookup_user( params->{id} )->to_json;
+};
+
+dance;

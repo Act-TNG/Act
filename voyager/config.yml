@@ -1,0 +1,14 @@
+charset:        "UTF-8"
+auto_page:      1
+
+plugins:
+  DBIC:
+    default:
+      dsn:              dbi:SQLite:db/mydata.db
+      schema_class:     Hello::Schema
+    legacy:
+      dsn:              dbi:Pg:dbname=act
+      schema_class:     Act::Schema
+      user:             actuser_data
+      pass:             xyzzy
+      
