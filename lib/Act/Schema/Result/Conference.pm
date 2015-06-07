@@ -39,6 +39,7 @@ Main conference website
 
 column "url" => {
     data_type          => 'text',
+    is_nullable        => 1,
 };
 
 =head2 syndicate
@@ -50,6 +51,7 @@ of a community event.
 
 column "syndicate" => {
     data_type          => 'text',
+    is_nullable        => 1,
 };
 
 =head2 edition
@@ -60,6 +62,7 @@ An edition is a delegated community event, under authority of previous mentioned
 
 column "edition" => {
     data_type          => 'text',
+    is_nullable        => 1,
 };
 
 =head2 name
@@ -70,6 +73,7 @@ Conference name
 
 column "name" => {
     data_type          => 'text',
+    is_nullable        => 1,
 };
 
 =head2 nickname
@@ -80,6 +84,7 @@ Conference nick name
 
 column "nickname" => {
     data_type          => 'text',
+    is_nullable        => 1,
 };
 
 =head2 theme
@@ -90,6 +95,7 @@ Conference Theme
 
 column "theme" => {
     data_type          => 'text',
+    is_nullable        => 1,
 };
 
 =head2 genre
@@ -100,6 +106,7 @@ Genre : workshop | hackathon | yapc | osdc
 
 column "genre" => {
     data_type          => 'text',
+    is_nullable        => 1,
 };
 
 =head2 continent
@@ -110,6 +117,7 @@ The continent on which the event is being held
 
 column "continent" => {
     data_type          => 'text',
+    is_nullable        => 1,
 };
 
 =head2 country
@@ -120,6 +128,7 @@ The country where the event is being held
 
 column "country" => {
     data_type          => 'text',
+    is_nullable        => 1,
 };
 
 =head2 city
@@ -130,6 +139,18 @@ The city where the event is being held
 
 column "city" => {
     data_type          => 'text',
+    is_nullable        => 1,
+};
+
+=head2 country_code
+
+The international Country code (iso 3166)
+
+=cut
+
+column "country_code" => {
+    data_type          => 'text',
+    is_nullable        => 1,
 };
 
 =head1 PRIMARY KEY
