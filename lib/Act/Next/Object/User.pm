@@ -11,7 +11,7 @@ has '_proxy' => (
   is            => 'ro',
 );
 
-has '_ID' => (
+has '_INDEX' => (
   is            => 'ro',
 );
 

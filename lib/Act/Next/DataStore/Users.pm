@@ -1,8 +1,21 @@
 package Act::Next::DataStore::Users;
 
-use constant _RESOURCE_OBJECT    => "Act::Next::Object::User";
-use constant _RESOURCE_SET       => "Act::Next::Set::Users";
-use constant _PRIMARY_RESULTSET  => "User";
+use constant _RESOURCE_OBJECT   => "Act::Next::Object::User";
+use constant _RESOURCE_SET      => "Act::Next::Set::Users";
+use constant _PRIMARY_RESULTSET => "User";
+use constant _PRIMARY_INDEX     => "user_id";
+use constant _ATTRIBUTES        => {
+    login_name          => 'login',
+    nick                => 'nick_name',
+    first_name          => 'first_name',
+    biography           => {
+        multilingual => {
+            table       => 'bios',
+            column      => 'bio',
+            language_id => 'lang'},
+        },
+};
+
 
 use Moo;
 
@@ -12,19 +25,6 @@ use Class::Load 'load_class';
 
 load_class(_RESOURCE_OBJECT);
 load_class(_RESOURCE_SET);
-
-our @attributes = (
-    _ID                 => 'user_id',
-    login_name          => 'login',
-    nick                => 'nick_name',
-    first_name          => 'first_name',
-);
-
-sub attributes_simple { (
-    'login_name',
-    'first_name',
-    'nick',
-) }
 
 sub attributes_multilingual { (
     'biography', 
@@ -67,7 +67,7 @@ sub update {
   $objt->_proxy->set_column('nick_name'       => $objt->{'nick'});
   $objt->_proxy->update;
   
-  # itterate over all 'recorded mutations'
+  # iterate over all 'recorded mutations'
   foreach my $lang (keys %{ $objt->_multilingual_mut } ) {
   
     # check if there is
@@ -108,18 +108,18 @@ sub remove {
   return;
 };
 
-sub inflate {
+sub inflated_hash {
+  my $self = shift;
   my $prim = shift;
   
   # inflate class attributes with primitive columns
-  my $prms = {
-    _proxy              => $prim,
-    _ID                 => $prim->get_column('user_id'),
-    login_name          => $prim->get_column('login'),
-    first_name          => $prim->get_column('first_name'),
-    nick                => $prim->get_column('nick_name'),
-    biography           => {},
-  };
+  my $prms = {};
+  $prms->{_proxy} = $prim;
+  $prms->{_INDEX} = $prim->get_column(_PRIMARY_INDEX);
+  foreach ($self->_attributes_simple) {
+    $prms->{$_} = $prim->get_column($self->_ATTRIBUTES->{$_})
+  }
+  $prms->{biography} = {};
   
   # search localized data
   my @lclz = $prim->search_related('bios')->all;
@@ -134,9 +134,9 @@ sub inflate {
 };
 
 sub new_from_primary_resultset_row {
-  my $clss = shift;
+  my $self = shift;
   my $prim = shift;
-  return _RESOURCE_OBJECT->new(inflate($prim));
+  return _RESOURCE_OBJECT->new($self->inflated_hash($prim));
 }
 
 1;

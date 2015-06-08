@@ -38,5 +38,30 @@ sub lookup_user {
         ->lookup(@_)
 };
 
+sub export_talks {
+    my $hndl = shift;
+    $hndl->api
+        ->resource('Talks')
+        ->export({conf_id => $hndl->resource_root->{_act_conf_id}})
+};
+
+sub export_attendees_for_event {
+    my $hndl = shift;
+    
+    my $rslt = $hndl->api
+        ->resource('Users')
+        ->export_joined('participations', {
+            'participations.conf_id' => $hndl->resource_root->{_act_conf_id},
+        })
+};
+
+sub export_participations_for_event {
+    my $hndl = shift;
+    $hndl->api
+        ->resource('Participations')
+        ->export({conf_id => $hndl->resource_root->{_act_conf_id}})
+};
+
+
 1;
 

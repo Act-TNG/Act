@@ -12,11 +12,7 @@ use Moo::Role;
 
 # more methods will get added for which no authentication is required
 
-sub lookup_user {
-    shift->api
-        ->resource('Users')
-        ->lookup_for_event(@_)
-};
+# sub lookup_user { }; # part of Authenticated
 
 1;
 

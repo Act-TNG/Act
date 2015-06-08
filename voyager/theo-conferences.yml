@@ -1,0 +1,3421 @@
+# Perl conferences information
+# Gathered by Philippe Bruhat (BooK) <book@cpan.org>
+# Free to use, don't forget to give credit/link back
+# Patches to http://github.com/yapceurope/perl-events/
+#
+# Fields:
+# - act_open: date of opening of the Act conference website
+# - act_instance: name of the Act instance hosting the conference website
+# - attendees: number of attendees
+# - begin: beginning date of the conference
+# - country_code: country code (iso 3166)
+# - city: city name (optional region/state)
+# - conf_id: Act-like conference id
+# - continent: continent name, in a 5 continents world view
+# - cost: hash indexed by price name
+# - country: country name
+# - end: end date of the conference
+# - genre: workshop | hackathon | yapc | osdc
+# - languages: languages of the conference list
+# - lc: language codes of the conference (iso 639)
+# - name: conference name
+# - nickname: conference nickname
+# - part_of: larger conference this conference was part of
+# - status: ok | canceled | unknown
+# - syndicate: the generic conference
+# - theme: theme of the conference
+# - type: grassroot | business
+# - url: main conference website
+---
+- act_instance: mongueurs.net
+  act_open: 0:0:0 16/12/2014
+  begin: 0:0:0 02/09/2015
+  country_code: es
+  city: Granada
+  conf_id: ye2015
+  continent: Europe
+  country: Spain
+  edition: 2015
+  end: 0:0:0 04/09/2015
+  genre: yapc
+  languages:
+    - English
+  lc:
+    - en
+  name: YAPC Europe
+  status: ok
+  syndicate: yapc_europe
+  theme: Art+Engineering
+  type: grassroot
+  url: http://act.yapc.eu/ye2015/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 26/01/2015
+  begin: 0:0:0 28/08/2015
+  country_code: ch
+  city: Olten
+  conf_id: spw2015
+  continent: Europe
+  country: Switzerland
+  edition: 2015
+  end: 0:0:0 29/08/2015
+  genre: workshop
+  languages:
+    - English
+  lc:
+    - en
+  name: Swiss Perl Workshop
+  status: ok
+  syndicate: swiss_perl_workshop
+  type: grassroot
+  url: http://act.perl-workshop.ch/spw2015/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 19/03/2015
+  begin: 0:0:0 26/06/2015
+  country_code: fr
+  city: Paris
+  conf_id: fpw2015
+  continent: Europe
+  country: France
+  edition: 2015
+  end: 0:0:0 27/06/2015
+  genre: workshop
+  languages:
+    - French
+    - English
+  lc:
+    - fr
+    - en
+  name: French Perl Workshop
+  status: ok
+  syndicate: french_perl_workshop
+  type: grassroot
+  url: http://journeesperl.fr/fpw2015/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 11/11/2014
+  begin: 0:0:0 08/06/2015
+  country_code: us
+  city: 'Salt Lake City, UT'
+  conf_id: yn2015
+  continent: America
+  country: United States
+  edition: 2015
+  end: 0:0:0 10/06/2015
+  genre: yapc
+  languages:
+    - English
+  lc:
+    - en
+  name: YAPC North America
+  status: ok
+  syndicate: yapc_north_america
+  type: grassroot
+  url: http://www.yapcna.org/yn2015/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 26/08/2014
+  begin: 0:0:0 08/05/2015
+  country_code: no
+  city: Oslo
+  conf_id: osdc2015no
+  continent: Europe
+  country: Norway
+  edition: 2015
+  end: 0:0:0 10/05/2015
+  genre: osdc
+  languages:
+    - English
+  lc:
+    - en
+  name: OSDC.no
+  status: ok
+  syndicate: osdc_no
+  type: grassroot
+  url: http://act.osdc.no/osdc2015no/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 26/01/2015
+  begin: 0:0:0 06/05/2015
+  country_code: de
+  city: Dresden
+  conf_id: gpw2015
+  continent: Europe
+  country: Germany
+  edition: 2015
+  end: 0:0:0 08/05/2015
+  genre: workshop
+  languages:
+    - German
+    - English
+  lc:
+    - de
+    - en
+  name: German Perl Workshop
+  status: ok
+  syndicate: german_perl_workshop
+  type: grassroot
+  url: http://act.yapc.eu/gpw2015/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 05/01/2015
+  begin: 0:0:0 16/04/2015
+  country_code: de
+  city: Berlin
+  conf_id: qa2015
+  continent: Europe
+  cost:
+    regular: 0
+  country: Germany
+  edition: 2015
+  end: 0:0:0 19/04/2015
+  genre: hackathon
+  name: Perl QA Hackathon
+  status: ok
+  syndicate: perl_qa_hackathon
+  type: grassroot
+  url: http://act.qa-hackathon.org/qa2015/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 04/01/2015
+  begin: 0:0:0 11/04/2015
+  country_code: us
+  city: 'Baltimore, MD'
+  conf_id: dcbpw2015
+  continent: America
+  country: United States
+  edition: 2015
+  end: 0:0:0 12/04/2015
+  genre: workshop
+  name: DC-Baltimore Perl Workshop
+  status: ok
+  syndicate: dc_baltimore_perl_workshop
+  type: grassroot
+  url: http://dcbpw.org/dcbpw2015/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 05/01/2014
+  begin: 0:0:0 10/04/2015
+  country_code: nl
+  city: Utrecht
+  conf_id: nlpw2015
+  continent: Europe
+  country: Netherlands
+  edition: 2015
+  end: 0:0:0 10/04/2015
+  genre: workshop
+  languages:
+    - Dutch
+    - English
+  lc:
+    - nl
+    - en
+  name: Dutch Perl Workshop
+  status: ok
+  syndicate: dutch_perl_workshop
+  type: grassroot
+  url: http://www.perlworkshop.nl/nlpw2015/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 22/09/2014
+  begin: 0:0:0 27/11/2014
+  country_code: fr
+  city: Lyon
+  conf_id: p2
+  continent: Europe
+  cost:
+    regular: 0
+  country: France
+  edition: 2
+  end: 0:0:0 30/11/2014
+  genre: hackathon
+  name: French Perl Hackathon
+  nickname: patch -p2
+  status: ok
+  syndicate: french_perl_hackathon
+  type: grassroot
+  url: http://patch.pm/p2/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 xx/xx/xxxx
+  begin: 0:0:0 22/11/2014
+  country_code: bg
+  city: Sofia
+  conf_id: sofia2014
+  continent: Europe
+  cost:
+    regular: 0
+  country: Bulgaria
+  edition: 2014
+  end: 0:0:0 22/11/2014
+  genre: workshop
+  languages:
+    - Bulgarian
+    - English
+  lc:
+    - bg
+    - en
+  name: Bulgarian Perl Workshop
+  nickname: BG Perl
+  status: ok
+  syndicate: bulgarian_perl_workshop
+  type: grassroot
+  url: ~
+- act_instance: mongueurs.net
+  act_open: 0:0:0 01/10/2014
+  begin: 0:0:0 22/11/2014
+  country_code: fr
+  city: Paris
+  conf_id: osdc2014fr
+  continent: Europe
+  country: France
+  edition: 2014
+  end: 0:0:0 22/11/2014
+  genre: osdc
+  languages:
+    - French
+    - English
+  lc:
+    - fr
+    - en
+  name: OSDC.fr
+  status: ok
+  syndicate: osdc_fr
+  type: grassroot
+  url: http://act.osdc.fr/osdc2014fr/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 19/09/2014
+  begin: 0:0:0 16/11/2014
+  country_code: fi
+  city: Helsinki
+  conf_id: npw2014
+  continent: Europe
+  cost:
+    regular: 50 EUR
+    student: 25 EUR
+  country: Finland
+  edition: 2014
+  end: 0:0:0 17/11/2014
+  genre: workshop
+  languages:
+    - English
+  lc:
+    - en
+  name: Nordic Perl Workshop
+  status: ok
+  syndicate: nordic_perl_workshop
+  type: grassroot
+  url: http://act.yapc.eu/npw2014/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 08/09/2014
+  begin: 0:0:0 08/11/2014
+  country_code: us
+  city: 'Pittsburgh, PA'
+  conf_id: ppw2014
+  continent: America
+  country: United States
+  edition: 2014
+  end: 0:0:0 09/11/2014
+  genre: workshop
+  name: Pittsburgh Perl Workshop
+  status: ok
+  syndicate: pittsburgh_perl_workshop
+  type: grassroot
+  url: http://pghpw.org/ppw2014/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 20/07/2014
+  begin: 0:0:0 08/11/2014
+  country_code: gb
+  city: London
+  conf_id: lpw2014
+  continent: Europe
+  cost:
+    regular: 0
+  country: United Kingdom
+  edition: 2014
+  end: 0:0:0 08/11/2014
+  genre: workshop
+  languages:
+    - English
+  lc:
+    - en
+  name: London Perl Workshop
+  status: ok
+  syndicate: london_perl_workshop
+  type: grassroot
+  url: http://act.yapc.eu/lpw2014/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 19/08/2014
+  begin: 0:0:0 08/11/2014
+  country_code: es
+  city: Barcelona
+  conf_id: barcelona2014
+  continent: Europe
+  country: Spain
+  edition: 2014
+  end: 0:0:0 08/11/2014
+  genre: workshop
+  languages:
+    - Catalan
+    - Spanish
+    - English
+  lc:
+    - ca
+    - es
+    - en
+  name: Barcelona Perl Workshop
+  status: ok
+  syndicate: barcelona_perl_workshop
+  type: grassroot
+  url: http://workshop.barcelona.pm/barcelona2014/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 03/06/2014
+  begin: 0:0:0 10/10/2014
+  country_code: at
+  city: Salzburg
+  conf_id: apw2014
+  continent: Europe
+  country: Austria
+  edition: 2014
+  end: 0:0:0 13/10/2014
+  genre: workshop
+  languages:
+    - German
+  lc:
+    - de
+  name: Austrian Perl Workshop
+  status: ok
+  syndicate: austrian_perl_workshop
+  type: grassroot
+  url: http://act.useperl.at/apw2014/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 14/01/2014
+  begin: 0:0:0 07/10/2014
+  country_code: us
+  city: 'Hancock, NY'
+  conf_id: eic2014
+  continent: America
+  cost:
+    regular: 0
+  country: United States
+  edition: 2014
+  end: 0:0:0 09/10/2014
+  genre: workshop
+  name: eCommerce Innovation
+  nickname: Perl::Dancer Conference
+  status: ok
+  syndicate: ecommerce_innovation
+  type: business
+  url: http://act.ecommerce-innovation.com/eic2014/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 03/06/2014
+  begin: 0:0:0 13/09/2014
+  country_code: gb
+  city: Manchester
+  conf_id: dlc2014
+  continent: Europe
+  country: United Kindom
+  edition: 2014
+  end: 0:0:0 13/09/2014
+  genre: osdc
+  languages:
+    - English
+  lc:
+    - en
+  name: Dynamic Languages Conference
+  status: canceled
+  syndicate: dynamic_languages_conference
+  type: grassroot
+  url: ~
+- act_instance: mongueurs.net
+  act_open: 0:0:0 04/02/2014
+  begin: 0:0:0 05/09/2014
+  country_code: ch
+  city: Olten
+  conf_id: spw2014
+  continent: Europe
+  country: Switzerland
+  edition: 2014
+  end: 0:0:0 06/09/2014
+  genre: workshop
+  languages:
+    - English
+  lc:
+    - en
+  name: Swiss Perl Workshop
+  status: ok
+  syndicate: swiss_perl_workshop
+  type: grassroot
+  url: http://act.perl-workshop.ch/spw2014/
+- act_instance: mongueurs.net
+  act_open: 00:00:00 27/01/2014
+  begin: 10:00:00 22/08/2014
+  country_code: bg
+  city: Sofia
+  conf_id: ye2014
+  continent: Europe
+  country: Bulgaria
+  edition: 2014
+  end: 20:0:0 24/08/2014
+  genre: yapc
+  languages:
+    - English
+  lc:
+    - en
+  name: YAPC Europe
+  status: ok
+  syndicate: yapc_europe
+  type: grassroot
+  url: http://yapc.eu/2014
+- act_instance: mongueurs.net
+  act_open: 0:0:0 21/05/2014
+  begin: 0:0:0 27/06/2014
+  country_code: es
+  city: Granada
+  conf_id: granada2014
+  continent: Europe
+  country: Spain
+  edition: 2014
+  end: 0:0:0 27/06/2014
+  genre: workshop
+  languages:
+    - Spanish
+    - English
+  lc:
+    - es
+    - en
+  name: Granada Perl Workshop
+  status: ok
+  syndicate: granada_perl_workshop
+  type: grassroot
+  url: http://workshop.granada.pm/granada2014/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 05/10/2013
+  begin: 0:0:0 23/06/2014
+  country_code: us
+  city: 'Orlando, FL'
+  conf_id: yn2014
+  continent: America
+  cost:
+    earlybird: 150 USD
+    regular: 250 USD
+  country: United States
+  edition: 2014
+  end: 0:0:0 25/06/2014
+  genre: yapc
+  languages:
+    - English
+  lc:
+    - en
+  name: YAPC North America
+  status: ok
+  syndicate: yapc_north_america
+  type: grassroot
+  url: http://www.yapcna.org/yn2014/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 04/02/2014
+  begin: 0:0:0 13/06/2014
+  country_code: fr
+  city: Paris
+  conf_id: fpw2014
+  continent: Europe
+  country: France
+  edition: 2014
+  end: 0:0:0 14/06/2014
+  genre: workshop
+  languages:
+    - French
+    - English
+  lc:
+    - fr
+    - en
+  name: French Perl Workshop
+  status: ok
+  syndicate: french_perl_workshop
+  type: grassroot
+  url: http://journeesperl.fr/fpw2014/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 09/02/2014
+  begin: 0:0:0 23/05/2014
+  country_code: no
+  city: Oslo
+  conf_id: mojo2014
+  continent: Europe
+  country: Norway
+  edition: 2014
+  end: 0:0:0 25/05/2014
+  genre: workshop
+  languages:
+    - English
+  lc:
+    - en
+  name: Mojoconf
+  status: ok
+  syndicate: mojoconf
+  type: grassroot
+  url: http://act.yapc.eu/mojo2014/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 21/01/2014
+  begin: 0:0:0 20/05/2014
+  country_code: cz
+  city: Prague
+  conf_id: czpw2014
+  continent: Europe
+  country: Czech Republic
+  edition: 2014
+  end: 0:0:0 21/05/2014
+  genre: workshop
+  languages:
+    - English
+    - Czech
+  lc:
+    - en
+    - cs
+  name: Czech Perl Workshop
+  status: ok
+  syndicate: czech_perl_workshop
+  type: grassroot
+  url: http://act.yapc.eu/czpw2014/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 24/12/2013
+  begin: 0:0:0 16/05/2014
+  country_code: pl
+  city: Poznan
+  conf_id: plpw2014
+  continent: Europe
+  country: Poland
+  edition: 2014
+  end: 0:0:0 18/05/2014
+  genre: workshop
+  languages:
+    - English
+    - Polish
+  lc:
+    - en
+    - pl
+  name: Polish Perl Workshop
+  status: ok
+  syndicate: polish_perl_workshop
+  type: grassroot
+  url: http://act.yapc.eu/plpw2014/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 16/02/2014
+  begin: 0:0:0 03/05/2014
+  country_code: us
+  city: 'Silver Spring, MD'
+  conf_id: dcbpw2014
+  continent: America
+  cost:
+    earlybird: 25 USD
+    regular: 50 USD
+  country: United States
+  edition: 2014
+  end: 0:0:0 04/05/2014
+  genre: workshop
+  name: DC-Baltimore Perl Workshop
+  status: ok
+  syndicate: dc_baltimore_perl_workshop
+  type: grassroot
+  url: http://dcbpw.org/dcbpw2014/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 21/01/2014
+  begin: 0:0:0 25/04/2014
+  country_code: nl
+  city: Utrecht
+  conf_id: nlpw2014
+  continent: Europe
+  country: Netherlands
+  edition: 2014
+  end: 0:0:0 25/04/2014
+  genre: workshop
+  languages:
+    - Dutch
+    - English
+  lc:
+    - nl
+    - en
+  name: Dutch Perl Workshop
+  status: ok
+  syndicate: dutch_perl_workshop
+  type: grassroot
+  url: http://www.perlworkshop.nl/nlpw2014/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 23/05/2013
+  begin: 0:0:0 26/03/2014
+  country_code: de
+  city: Hannover
+  conf_id: gpw2014
+  continent: Europe
+  country: Germany
+  edition: 2014
+  end: 0:0:0 28/03/2014
+  genre: workshop
+  languages:
+    - German
+    - English
+  lc:
+    - de
+    - en
+  name: German Perl Workshop
+  status: ok
+  syndicate: german_perl_workshop
+  type: grassroot
+  url: http://act.yapc.eu/gpw2014/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 24/12/2013
+  begin: 0:0:0 13/03/2014
+  country_code: fr
+  city: Lyon
+  conf_id: qa2014
+  continent: Europe
+  cost:
+    regular: 0
+  country: France
+  edition: 2014
+  end: 0:0:0 16/03/2014
+  genre: hackathon
+  name: Perl QA Hackathon
+  status: ok
+  syndicate: perl_qa_hackathon
+  type: grassroot
+  url: http://act.qa-hackathon.org/qa2014/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 19/12/2013
+  begin: 0:0:0 25/01/2014
+  country_code: us
+  city: 'Tampa, FL'
+  conf_id: tbpw2014
+  continent: America
+  country: United States
+  edition: 2014
+  end: 0:0:0 25/01/2014
+  genre: workshop
+  languages:
+    - English
+  lc:
+    - en
+  name: Tampa Bay Perl Workshop
+  nickname: The Perl Oasis West
+  status: ok
+  syndicate: tampa_bay_perl_workshop
+  type: grassroot
+  url: http://www.perloasis.info/tbpw2014/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 15/09/2013
+  begin: 0:0:0 06/12/2013
+  country_code: fr
+  city: Paris
+  conf_id: p1
+  continent: Europe
+  cost:
+    regular: 0
+  country: France
+  edition: 1
+  end: 0:0:0 08/12/2013
+  genre: hackathon
+  name: French Perl Hackathon
+  nickname: patch -p1
+  status: ok
+  syndicate: french_perl_hackathon
+  type: grassroot
+  url: http://patch.pm/p1/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 25/06/2013
+  begin: 0:0:0 30/11/2013
+  country_code: gb
+  city: London
+  conf_id: lpw2013
+  continent: Europe
+  cost:
+    regular: 0
+  country: United Kingdom
+  edition: 2013
+  end: 0:0:0 30/11/2013
+  genre: workshop
+  languages:
+    - English
+  lc:
+    - en
+  name: London Perl Workshop
+  status: ok
+  syndicate: london_perl_workshop
+  type: grassroot
+  url: http://act.yapc.eu/lpw2013/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 02/10/2013
+  begin: 0:0:0 23/11/2013
+  country_code: dk
+  city: Copenhagen
+  conf_id: npw2013
+  continent: Europe
+  cost:
+    regular: 50 EUR
+    student: 25 EUR
+  country: Denmark
+  edition: 2013
+  end: 0:0:0 23/11/2013
+  genre: workshop
+  languages:
+    - English
+  lc:
+    - en
+  name: Nordic Perl Workshop
+  status: ok
+  syndicate: nordic_perl_workshop
+  type: grassroot
+  url: http://act.yapc.eu/npw2013/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 13/09/2013
+  begin: 0:0:0 02/11/2013
+  country_code: at
+  city: Salzburg
+  conf_id: apw2013
+  continent: Europe
+  country: Austria
+  edition: 2013
+  end: 0:0:0 03/11/2013
+  genre: workshop
+  languages:
+    - German
+  lc:
+    - de
+  name: Austrian Perl Workshop
+  status: ok
+  syndicate: austrian_perl_workshop
+  type: grassroot
+  url: http://act.useperl.at/apw2013/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 02/09/2013
+  begin: 0:0:0 24/10/2013
+  country_code: pt
+  city: Lisbon
+  conf_id: ptpw2013
+  continent: Europe
+  country: Portugal
+  edition: 2013
+  end: 0:0:0 25/10/2013
+  genre: workshop
+  languages:
+    - Portuguese
+    - English
+  lc:
+    - pt
+    - en
+  name: Portuguese Perl Workshop
+  status: ok
+  syndicate: portuguese_perl_workshop
+  type: grassroot
+  url: http://workshop.perl.pt/ptpw2013/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 22/08/2013
+  begin: 0:0:0 08/10/2013
+  country_code: us
+  city: 'Hancock, NY'
+  conf_id: eic2013
+  continent: America
+  cost:
+    regular: 0
+  country: United States
+  edition: 2013
+  end: 0:0:0 11/10/2013
+  genre: workshop
+  name: eCommerce Innovation
+  status: ok
+  syndicate: ecommerce_innovation
+  type: business
+  url: http://act.ecommerce-innovation.com/eic2013/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 27/08/2013
+  begin: 0:0:0 04/10/2013
+  country_code: us
+  city: 'Oakdale, PA'
+  conf_id: ppw2013
+  continent: America
+  country: United States
+  edition: 2013
+  end: 0:0:0 06/10/2013
+  genre: workshop
+  name: Pittsburgh Perl Workshop
+  status: ok
+  syndicate: pittsburgh_perl_workshop
+  type: grassroot
+  url: http://pghpw.org/ppw2013/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 02/05/2013
+  begin: 0:0:0 04/10/2013
+  country_code: fr
+  city: Paris
+  conf_id: osdc2013fr
+  continent: Europe
+  country: France
+  edition: 2013
+  end: 0:0:0 05/10/2013
+  genre: osdc
+  languages:
+    - French
+    - English
+  lc:
+    - fr
+    - en
+  name: OSDC.fr
+  part_of: Open World Forum
+  part_of_url: http://www.openworldforum.org/
+  status: ok
+  syndicate: osdc_fr
+  type: grassroot
+  url: http://act.osdc.fr/osdc2013fr/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 21/12/2012
+  attendees: 331
+  begin: 0:0:0 12/08/2013
+  country_code: ua
+  city: Kiev
+  conf_id: ye2013
+  continent: Europe
+  country: Ukraine
+  edition: 2013
+  end: 0:0:0 14/08/2013
+  genre: yapc
+  languages:
+    - English
+  lc:
+    - en
+  name: YAPC Europe
+  status: ok
+  syndicate: yapc_europe
+  theme: Future Perl
+  type: grassroot
+  url: http://yapc.eu/2013
+- act_instance: mongueurs.net
+  act_open: 0:0:0 31/05/2013
+  begin: 0:0:0 10/08/2013
+  country_code: cn
+  city: Beijing
+  conf_id: bjpw2013
+  continent: Asia
+  country: China
+  edition: 2013
+  end: 0:0:0 10/08/2013
+  genre: workshop
+  name: Beijing Perl Workshop
+  status: ok
+  syndicate: beijing_perl_workshop
+  type: grassroot
+  url: http://conference.perlchina.org/bjpw2013/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 19/06/2013
+  begin: 0:0:0 26/07/2013
+  country_code: fr
+  city: Paris
+  conf_id: p0
+  continent: Europe
+  cost:
+    regular: 0
+  country: France
+  edition: 0
+  end: 0:0:0 28/07/2013
+  genre: hackathon
+  name: French Perl Hackathon
+  nickname: patch -p0
+  status: ok
+  syndicate: french_perl_hackathon
+  type: grassroot
+  url: http://patch.pm/p0/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 19/02/2013
+  begin: 0:0:0 14/06/2013
+  country_code: fr
+  city: Nancy
+  conf_id: fpw2013
+  continent: Europe
+  country: France
+  edition: 2013
+  end: 0:0:0 15/06/2013
+  genre: workshop
+  languages:
+    - French
+    - English
+  lc:
+    - fr
+    - en
+  name: French Perl Workshop
+  status: ok
+  syndicate: french_perl_workshop
+  type: grassroot
+  url: http://journeesperl.fr/fpw2013/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 29/12/2012
+  begin: 0:0:0 03/06/2013
+  country_code: us
+  city: 'Austin, TX'
+  conf_id: yn2013
+  continent: America
+  country: United States
+  edition: 2013
+  end: 0:0:0 05/06/2013
+  genre: yapc
+  languages:
+    - English
+  lc:
+    - en
+  name: YAPC North America
+  status: ok
+  syndicate: yapc_north_america
+  theme: 25 Years of Perl
+  type: grassroot
+  url: http://www.yapcna.org/yn2013/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 03/02/2013
+  begin: 0:0:0 25/05/2013
+  country_code: pl
+  city: Warsaw
+  conf_id: plpw2013
+  continent: Europe
+  country: Poland
+  edition: 2013
+  end: 0:0:0 26/05/2013
+  genre: workshop
+  languages:
+    - English
+    - Polish
+  lc:
+    - en
+    - pl
+  name: Polish Perl Workshop
+  status: ok
+  syndicate: polish_perl_workshop
+  type: grassroot
+  url: http://act.yapc.eu/plpw2013/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 22/01/2013
+  begin: 0:0:0 20/04/2013
+  country_code: us
+  city: 'Baltimore, MD'
+  conf_id: dcbpw2013
+  continent: America
+  cost:
+    earlybird: 25 USD
+    regular: 50 USD
+  country: United States
+  edition: 2013
+  end: 0:0:0 20/04/2013
+  genre: workshop
+  name: DC-Baltimore Perl Workshop
+  status: ok
+  syndicate: dc_baltimore_perl_workshop
+  type: grassroot
+  url: http://dcbpw.org/dcbpw2013/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 28/01/2013
+  begin: 0:0:0 19/04/2013
+  country_code: nl
+  city: Arnhem
+  conf_id: nlpw2013
+  continent: Europe
+  country: Netherlands
+  edition: 2013
+  end: 0:0:0 19/04/2013
+  genre: workshop
+  languages:
+    - Dutch
+    - English
+  lc:
+    - nl
+    - en
+  name: Dutch Perl Workshop
+  status: ok
+  syndicate: dutch_perl_workshop
+  type: grassroot
+  url: http://www.perlworkshop.nl/nlpw2013/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 23/12/2012
+  begin: 0:0:0 12/04/2013
+  country_code: gb
+  city: Lancaster
+  conf_id: qa2013
+  continent: Europe
+  cost:
+    regular: 0
+  country: United Kingdom
+  edition: 2013
+  end: 0:0:0 14/04/2013
+  genre: hackathon
+  name: Perl QA Hackathon
+  status: ok
+  syndicate: perl_qa_hackathon
+  type: grassroot
+  url: http://2013.qa-hackathon.org/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 15/01/2013
+  begin: 0:0:0 22/03/2013
+  country_code: ch
+  city: Bern
+  conf_id: spw2013
+  continent: Europe
+  country: Switzerland
+  edition: 2013
+  end: 0:0:0 22/03/2013
+  genre: workshop
+  languages:
+    - English
+  lc:
+    - en
+  name: Swiss Perl Workshop
+  status: ok
+  syndicate: swiss_perl_workshop
+  type: grassroot
+  url: http://act.perl-workshop.ch/spw2013/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 16/10/2012
+  begin: 0:0:0 13/03/2013
+  country_code: de
+  city: Berlin
+  conf_id: gpw2013
+  continent: Europe
+  country: Germany
+  edition: 2013
+  end: 0:0:0 15/03/2013
+  genre: workshop
+  languages:
+    - German
+    - English
+  lc:
+    - de
+    - en
+  name: German Perl Workshop
+  status: ok
+  syndicate: german_perl_workshop
+  type: grassroot
+  url: http://act.yapc.eu/gpw2013/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 27/08/2012
+  begin: 0:0:0 24/02/2013
+  country_code: il
+  city: Ramat Gan
+  conf_id: ilpw2013
+  continent: Asia
+  cost:
+    regular: 0
+  country: Israel
+  edition: 2013
+  end: 0:0:0 25/02/2013
+  genre: workshop
+  name: Perl Workshop in Israel
+  status: ok
+  syndicate: perl_workshop_in_israel
+  type: grassroot
+  url: http://act.perl.org.il/ilpw2013/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 29/11/2012
+  begin: 0:0:0 11/01/2013
+  country_code: us
+  city: 'Orlando, FL'
+  conf_id: opw2013
+  continent: America
+  country: United States
+  edition: 2013
+  end: 0:0:0 13/01/2013
+  genre: workshop
+  languages:
+    - English
+  lc:
+    - en
+  name: Orlando Perl Workshop
+  nickname: The Perl Oasis
+  status: ok
+  syndicate: orlando_perl_workshop
+  type: grassroot
+  url: http://www.perloasis.info/opw2013/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 05/09/2012
+  begin: 0:0:0 07/12/2012
+  country_code: fr
+  city: Paris
+  conf_id: qh2012eu
+  continent: Europe
+  country: France
+  edition: 2012
+  end: 0:0:0 09/12/2012
+  genre: hackathon
+  languages:
+    - English
+  lc:
+    - en
+  name: Quack and Hack Europe
+  status: ok
+  syndicate: quack_and_hack_europe
+  type: business
+  url: http://act.yapc.eu/qh2012eu/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 24/05/2012
+  begin: 0:0:0 24/11/2012
+  country_code: gb
+  city: London
+  conf_id: lpw2012
+  continent: Europe
+  cost:
+    regular: 0
+  country: United Kingdom
+  edition: 2012
+  end: 0:0:0 24/11/2012
+  genre: workshop
+  languages:
+    - English
+  lc:
+    - en
+  name: London Perl Workshop
+  status: ok
+  syndicate: london_perl_workshop
+  type: grassroot
+  url: http://act.yapc.eu/lpw2012/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 05/09/2012
+  begin: 0:0:0 16/11/2012
+  country_code: at
+  city: Vienna
+  conf_id: apw2012
+  continent: Europe
+  country: Austria
+  edition: 2012
+  end: 0:0:0 17/11/2012
+  genre: workshop
+  languages:
+    - German
+  lc:
+    - de
+  name: Austrian Perl Workshop
+  status: ok
+  syndicate: austrian_perl_workshop
+  type: grassroot
+  url: http://2012.useperl.at/apw2012/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 10/04/2012
+  begin: 0:0:0 xx/10/2012
+  country_code: us
+  city: 'Pittsburgh, PA'
+  conf_id: ppw2012
+  continent: America
+  country: United States
+  edition: 2012
+  end: 0:0:0 xx/10/2012
+  genre: workshop
+  name: Pittsburgh Perl Workshop
+  status: canceled
+  syndicate: pittsburgh_perl_workshop
+  type: grassroot
+  url: http://pghpw.org/ppw2012/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 10/04/2012
+  begin: 0:0:0 13/10/2012
+  country_code: se
+  city: Stockholm
+  conf_id: npw2012
+  continent: Europe
+  cost:
+    regular: 50 EUR
+    student: 25 EUR
+  country: Sweden
+  edition: 2012
+  end: 0:0:0 14/10/2012
+  genre: workshop
+  languages:
+    - English
+  lc:
+    - en
+  name: Nordic Perl Workshop
+  status: ok
+  syndicate: nordic_perl_workshop
+  type: grassroot
+  url: http://act.yapc.eu/npw2012/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 17/07/2012
+  begin: 0:0:0 12/10/2012
+  country_code: fr
+  city: Paris
+  conf_id: osdc2012fr
+  continent: Europe
+  country: France
+  edition: 2012
+  end: 0:0:0 13/10/2012
+  genre: osdc
+  languages:
+    - French
+    - English
+  lc:
+    - fr
+    - en
+  name: OSDC.fr
+  part_of: Open World Forum
+  part_of_url: http://www.openworldforum.org/
+  status: ok
+  syndicate: osdc_fr
+  type: grassroot
+  url: http://act.osdc.fr/osdc2012fr/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 15/05/2012
+  begin: 0:0:0 11/10/2012
+  country_code: it
+  city: Bologna
+  conf_id: ipw2012
+  continent: Europe
+  country: Italy
+  edition: 2012
+  end: 0:0:0 12/10/2012
+  genre: workshop
+  languages:
+    - Italian
+    - English
+  lc:
+    - it
+    - en
+  name: Italian Perl Workshop
+  status: ok
+  syndicate: italian_perl_workshop
+  type: grassroot
+  url: http://conferences.yapceurope.org/ipw2012/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 17/07/2012
+  begin: 0:0:0 22/09/2012
+  country_code: pt
+  city: Braga
+  conf_id: ptpw2012
+  continent: Europe
+  country: Portugal
+  edition: 2012
+  end: 0:0:0 23/09/2012
+  genre: workshop
+  languages:
+    - Portuguese
+    - English
+  lc:
+    - pt
+    - en
+  name: Portuguese Perl Workshop
+  status: ok
+  syndicate: portuguese_perl_workshop
+  type: grassroot
+  url: http://workshop.perl.pt/ptpw2012/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 25/05/2012
+  begin: 0:0:0 26/08/2012
+  country_code: no
+  city: Preikestolen
+  conf_id: mtmh2012
+  continent: Europe
+  country: Norway
+  edition: 2012
+  end: 0:0:0 30/08/2012
+  genre: hackathon
+  name: Moving to Moose Hackathon
+  status: ok
+  syndicate: moving_to_moose_hackathon
+  type: grassroot
+  url: http://act.yapc.eu/mtmh2012/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 10/01/2012
+  begin: 0:0:0 20/08/2012
+  country_code: de
+  city: Frankfurt
+  conf_id: ye2012
+  continent: Europe
+  country: Germany
+  edition: 2012
+  end: 0:0:0 22/08/2012
+  genre: yapc
+  languages:
+    - English
+  lc:
+    - en
+  name: YAPC Europe
+  status: ok
+  syndicate: yapc_europe
+  type: grassroot
+  url: http://act.yapc.eu/ye2012/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 25/03/2012
+  begin: 0:0:0 30/06/2012
+  country_code: us
+  city: 'Paoli, PA'
+  conf_id: qh2012
+  continent: America
+  country: United States
+  edition: 2012
+  end: 0:0:0 01/07/2012
+  genre: workshop
+  name: Quack and Hack
+  status: ok
+  syndicate: quack_and_hack
+  type: grassroot
+  url: http://act.yapc.eu/qh2012/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 01/03/2012
+  begin: 0:0:0 29/06/2012
+  country_code: fr
+  city: Strasbourg
+  conf_id: fpw2012
+  continent: Europe
+  country: France
+  edition: 2012
+  end: 0:0:0 30/06/2012
+  genre: workshop
+  languages:
+    - French
+    - English
+  lc:
+    - fr
+    - en
+  name: French Perl Workshop
+  status: ok
+  syndicate: french_perl_workshop
+  type: grassroot
+  url: http://journeesperl.fr/fpw2012/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 04/01/2012
+  begin: 0:0:0 14/04/2012
+  country_code: nl
+  city: The Hague
+  conf_id: nlpw2012
+  continent: Europe
+  country: Netherlands
+  edition: 2012
+  end: 0:0:0 14/04/2012
+  genre: workshop
+  languages:
+    - Dutch
+    - English
+  lc:
+    - nl
+    - en
+  name: Dutch Perl Workshop
+  status: ok
+  syndicate: dutch_perl_workshop
+  type: grassroot
+  url: http://www.perlworkshop.nl/nlpw2012/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 02/01/2012
+  begin: 0:0:0 14/04/2012
+  country_code: us
+  city: 'Baltimore, MD'
+  conf_id: dcbpw2012
+  continent: America
+  cost:
+    earlybird: 25 USD
+    regular: 50 USD
+  country: United States
+  edition: 2012
+  end: 0:0:0 14/04/2012
+  genre: workshop
+  name: DC-Baltimore Perl Workshop
+  status: ok
+  syndicate: dc_baltimore_perl_workshop
+  type: grassroot
+  url: http://dcbpw.org/dcbpw2012/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 21/11/2011
+  begin: 0:0:0 30/03/2012
+  country_code: fr
+  city: Paris
+  conf_id: qa2012
+  continent: Europe
+  cost:
+    regular: 0
+  country: France
+  edition: 2012
+  end: 0:0:0 01/04/2012
+  genre: hackathon
+  name: Perl QA Hackathon
+  status: ok
+  syndicate: perl_qa_hackathon
+  type: grassroot
+  url: http://2012.qa-hackathon.org/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 12/07/2011
+  begin: 0:0:0 05/03/2012
+  country_code: de
+  city: Erlangen
+  conf_id: gpw2012
+  continent: Europe
+  country: Germany
+  edition: 2012
+  end: 0:0:0 06/03/2012
+  genre: workshop
+  languages:
+    - German
+    - English
+  lc:
+    - de
+    - en
+  name: German Perl Workshop
+  status: ok
+  syndicate: german_perl_workshop
+  type: grassroot
+  url: http://conferences.yapceurope.org/gpw2012/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 18/11/2011
+  begin: 0:0:0 28/02/2012
+  country_code: il
+  city: Ramat Gan
+  conf_id: ilpw2012
+  continent: Asia
+  cost:
+    regular: 0
+  country: Israel
+  edition: 2012
+  end: 0:0:0 28/02/2012
+  genre: workshop
+  name: Perl Workshop in Israel
+  status: ok
+  syndicate: perl_workshop_in_israel
+  type: grassroot
+  url: http://act.perl.org.il/ilpw2012/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 26/09/2011
+  begin: 0:0:0 14/01/2012
+  country_code: us
+  city: 'Orlando, FL'
+  conf_id: opw2012
+  continent: America
+  country: United States
+  edition: 2012
+  end: 0:0:0 14/01/2012
+  genre: workshop
+  languages:
+    - English
+  lc:
+    - en
+  name: Orlando Perl Workshop
+  nickname: The Perl Oasis
+  status: ok
+  syndicate: orlando_perl_workshop
+  type: grassroot
+  url: http://www.perloasis.info/opw2012/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 25/07/2011
+  begin: 0:0:0 12/11/2011
+  country_code: gb
+  city: London
+  conf_id: lpw2011
+  continent: Europe
+  cost:
+    regular: 0
+  country: United Kingdom
+  edition: 2011
+  end: 0:0:0 12/11/2011
+  genre: workshop
+  languages:
+    - English
+  lc:
+    - en
+  name: London Perl Workshop
+  status: ok
+  syndicate: london_perl_workshop
+  type: grassroot
+  url: http://conferences.yapceurope.org/lpw2011/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 13/09/2011
+  begin: 0:0:0 04/11/2011
+  country_code: at/sk
+  city: Vienna/Bratislava
+  conf_id: tcpw2011
+  continent: Europe
+  country: Austria/Slovakia
+  edition: 2011
+  end: 0:0:0 05/11/2011
+  genre: workshop
+  languages:
+    - English
+    - German
+    - Slovakian
+  lc:
+    - en
+    - de_AT
+    - sk
+  name: TwinCity Perl Workshop
+  nickname: TCPW2011
+  status: ok
+  syndicate: twincity_perl_workshop
+  theme: Building bridges
+  type: grassroot
+  url: http://conferences.yapceurope.org/tcpw2011/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 21/06/2011
+  begin: 0:0:0 19/10/2011
+  country_code: de
+  city: Frankfurt/Main
+  conf_id: gpw2011
+  continent: Europe
+  country: Germany
+  edition: 2011
+  end: 0:0:0 21/10/2011
+  genre: workshop
+  languages:
+    - German
+    - English
+  lc:
+    - de
+    - en
+  name: German Perl Workshop
+  status: ok
+  syndicate: german_perl_workshop
+  type: grassroot
+  url: http://conferences.yapceurope.org/gpw2011/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 20/09/2011
+  begin: 0:0:0 15/10/2011
+  country_code: be
+  city: Brussels
+  conf_id: bpw2011
+  continent: Europe
+  country: Belgium
+  edition: 2011
+  end: 0:0:0 15/10/2011
+  genre: workshop
+  languages:
+    - English
+    - French
+    - Dutch
+  lc:
+    - en
+    - fr
+    - nl
+  name: Belgian Perl Workshop
+  status: ok
+  syndicate: belgian_perl_workshop
+  type: grassroot
+  url: http://conferences.yapceurope.org/bpw2011/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 02/03/2011
+  begin: 0:0:0 08/10/2011
+  country_code: us
+  city: 'Pittsburgh, PA'
+  conf_id: ppw2011
+  continent: America
+  country: United States
+  edition: 2011
+  end: 0:0:0 09/10/2011
+  genre: workshop
+  name: Pittsburgh Perl Workshop
+  status: ok
+  syndicate: pittsburgh_perl_workshop
+  type: grassroot
+  url: http://pghpw.org/ppw2011/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 14/06/2011
+  begin: 0:0:0 23/09/2011
+  country_code: fr
+  city: Paris
+  conf_id: osdc2011fr
+  continent: Europe
+  country: France
+  edition: 2011
+  end: 0:0:0 24/09/2011
+  genre: osdc
+  languages:
+    - French
+    - English
+  lc:
+    - fr
+    - en
+  name: OSDC.fr
+  part_of: Open World Forum
+  part_of_url: http://www.openworldforum.org/
+  status: ok
+  syndicate: osdc_fr
+  type: grassroot
+  url: http://act.osdc.fr/osdc2011fr/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 20/07/2011
+  begin: 0:0:0 22/09/2011
+  country_code: pt
+  city: Lisbon
+  conf_id: ptpw2011
+  continent: Europe
+  country: Portugal
+  edition: 2011
+  end: 0:0:0 23/09/2011
+  genre: workshop
+  languages:
+    - Portuguese
+    - English
+  lc:
+    - pt
+    - en
+  name: Portuguese Perl Workshop
+  status: ok
+  syndicate: portuguese_perl_workshop
+  type: grassroot
+  url: http://workshop.perl.pt/ptpw2011/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 24/12/2010
+  begin: 0:0:0 08/09/2011
+  country_code: it
+  city: Turin
+  conf_id: ipw2011
+  continent: Europe
+  country: Italy
+  edition: 2011
+  end: 0:0:0 09/09/2011
+  genre: workshop
+  languages:
+    - Italian
+    - English
+  lc:
+    - it
+    - en
+  name: Italian Perl Workshop
+  status: ok
+  syndicate: italian_perl_workshop
+  type: grassroot
+  url: http://conferences.yapceurope.org/ipw2011/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 12/06/2011
+  begin: 0:0:0 26/08/2011
+  country_code: gb
+  city: Edinburgh
+  conf_id: dlc2011
+  continent: Europe
+  country: United Kindom
+  edition: 2011
+  end: 0:0:0 28/08/2011
+  genre: osdc
+  languages:
+    - English
+  lc:
+    - en
+  name: Dynamic Languages Conference
+  status: ok
+  syndicate: dynamic_languages_conference
+  type: grassroot
+  url: http://www.dynamiclanguages.co.uk/dlc2011
+- act_instance: mongueurs.net
+  act_open: 0:0:0 18/01/2011
+  attendees: 278
+  begin: 0:0:0 15/08/2011
+  country_code: lv
+  city: Riga
+  conf_id: ye2011
+  continent: Europe
+  country: Latvia
+  edition: 2011
+  end: 0:0:0 17/08/2011
+  genre: yapc
+  languages:
+    - English
+  lc:
+    - en
+  name: YAPC Europe
+  status: ok
+  syndicate: yapc_europe
+  theme: Modern Perl
+  type: grassroot
+  url: http://yapceurope.lv/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 07/04/2011
+  begin: 0:0:0 02/07/2011
+  country_code: cn
+  city: Beijing
+  conf_id: bjpw2011
+  continent: Asia
+  country: China
+  edition: 2011
+  end: 0:0:0 02/07/2013
+  genre: workshop
+  name: Beijing Perl Workshop
+  status: ok
+  syndicate: beijing_perl_workshop
+  type: grassroot
+  url: http://conference.perlchina.org/bjpw2011/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 26/09/2010
+  begin: 0:0:0 27/06/2011
+  country_code: us
+  city: 'Asheville, NC'
+  conf_id: yn2011
+  continent: America
+  country: United States
+  edition: 2011
+  end: 0:0:0 29/06/2011
+  genre: yapc
+  languages:
+    - English
+  lc:
+    - en
+  name: YAPC North America
+  status: ok
+  syndicate: yapc_north_america
+  type: grassroot
+  url: http://www.yapcna.org/yn2011/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 10/01/2011
+  begin: 0:0:0 24/06/2011
+  country_code: fr
+  city: Paris
+  conf_id: fpw2011
+  continent: Europe
+  country: France
+  edition: 2011
+  end: 0:0:0 25/06/2011
+  genre: workshop
+  languages:
+    - French
+    - English
+  lc:
+    - fr
+    - en
+  name: French Perl Workshop
+  status: ok
+  syndicate: french_perl_workshop
+  type: grassroot
+  url: http://journeesperl.fr/fpw2011/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 26/04/2011
+  begin: 0:0:0 18/06/2011
+  country_code: se
+  city: Malmö
+  conf_id: npw2011
+  continent: Europe
+  country: Sweden
+  edition: 2011
+  end: 0:0:0 19/06/2011
+  genre: workshop
+  languages:
+    - English
+  lc:
+    - en
+  name: Nordic Perl Workshop
+  status: ok
+  syndicate: nordic_perl_workshop
+  type: grassroot
+  url: http://conferences.yapceurope.org/npw2011/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 22/01/2011
+  begin: 0:0:0 16/04/2011
+  country_code: nl
+  city: Amsterdam
+  conf_id: qa2011
+  continent: Europe
+  cost:
+    regular: 0
+  country: Netherlands
+  edition: 2011
+  end: 0:0:0 18/04/2011
+  genre: hackathon
+  name: Perl QA Hackathon
+  status: ok
+  syndicate: perl_qa_hackathon
+  type: grassroot
+  url: http://2011.qa-hackathon.org/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 20/12/2010
+  begin: 0:0:0 05/03/2011
+  country_code: nl
+  city: The Hague
+  conf_id: nlpw2011
+  continent: Europe
+  country: Netherlands
+  edition: 2011
+  end: 0:0:0 05/03/2011
+  genre: workshop
+  languages:
+    - Dutch
+    - English
+  lc:
+    - nl
+    - en
+  name: Dutch Perl Workshop
+  status: ok
+  syndicate: dutch_perl_workshop
+  type: grassroot
+  url: http://www.perlworkshop.nl/nlpw2011/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 17/10/2010
+  begin: 0:0:0 05/02/2011
+  country_code: us
+  city: 'Minneapolis, MN'
+  conf_id: mpw2011
+  continent: America
+  country: United States
+  edition: 2011
+  end: 0:0:0 05/02/2011
+  genre: workshop
+  name: Frozen Perl
+  status: ok
+  syndicate: frozen_perl
+  type: grassroot
+  url: http://www.frozen-perl.org/mpw2011/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 14/11/2010
+  begin: 0:0:0 15/01/2011
+  country_code: us
+  city: 'Orlando, FL'
+  conf_id: opw2011
+  continent: America
+  country: United States
+  edition: 2011
+  end: 0:0:0 15/01/2011
+  genre: workshop
+  languages:
+    - English
+  lc:
+    - en
+  name: Orlando Perl Workshop
+  nickname: The Perl Oasis
+  status: ok
+  syndicate: orlando_perl_workshop
+  type: grassroot
+  url: http://www.perloasis.info/opw2011/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 15/09/2010
+  begin: 0:0:0 04/12/2010
+  country_code: gb
+  city: London
+  conf_id: lpw2010
+  continent: Europe
+  cost:
+    regular: 0
+  country: United Kingdom
+  edition: 2010
+  end: 0:0:0 04/12/2010
+  genre: workshop
+  languages:
+    - English
+  lc:
+    - en
+  name: London Perl Workshop
+  status: ok
+  syndicate: london_perl_workshop
+  type: grassroot
+  url: http://conferences.yapceurope.org/lpw2010/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 20/10/2010
+  begin: 0:0:0 14/11/2010
+  country_code: is
+  city: Reykjavík
+  conf_id: npw2010
+  continent: Europe
+  country: Iceland
+  edition: 2010
+  end: 0:0:0 14/11/2010
+  genre: workshop
+  languages:
+    - English
+  lc:
+    - en
+  name: Nordic Perl Workshop
+  part_of: RDFC (Reykjavík Digital Freedom Conference)
+  status: ok
+  syndicate: nordic_perl_workshop
+  type: grassroot
+  url: http://conferences.yapceurope.org/npw2010/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 10/08/2010
+  begin: 0:0:0 05/11/2010
+  country_code: at
+  city: Vienna
+  conf_id: apw2010
+  continent: Europe
+  country: Austria
+  edition: 2010
+  end: 0:0:0 06/11/2010
+  genre: workshop
+  languages:
+    - German
+  lc:
+    - de
+  name: Austrian Perl Workshop
+  status: ok
+  syndicate: austrian_perl_workshop
+  type: grassroot
+  url: http://conferences.yapceurope.org/apw2010/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 24/08/2010
+  begin: 0:0:0 09/10/2010
+  country_code: us
+  city: 'Pittsburgh, PA'
+  conf_id: ppw2010
+  continent: America
+  country: United States
+  edition: 2010
+  end: 0:0:0 10/10/2010
+  genre: workshop
+  name: Pittsburgh Perl Workshop
+  status: ok
+  syndicate: pittsburgh_perl_workshop
+  type: grassroot
+  url: http://pghpw.org/ppw2010/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 27/07/2010
+  begin: 0:0:0 09/10/2010
+  country_code: fr
+  city: Paris
+  conf_id: osdc2010fr
+  continent: Europe
+  country: France
+  edition: 2010
+  end: 0:0:0 10/10/2010
+  genre: osdc
+  languages:
+    - French
+  lc:
+    - fr
+  name: OSDC.fr
+  status: ok
+  syndicate: osdc_fr
+  type: grassroot
+  url: http://act.osdc.fr/osdc2010fr/
+  url_lanyrd: http://lanyrd.com/2010/osdcfr/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 22/11/2009
+  begin: 0:0:0 04/08/2010
+  country_code: it
+  city: Pisa
+  conf_id: ye2010
+  continent: Europe
+  country: Italy
+  edition: 2010
+  end: 0:0:0 06/08/2010
+  genre: yapc
+  languages:
+    - English
+  lc:
+    - en
+  name: YAPC Europe
+  status: ok
+  syndicate: yapc_europe
+  theme: The Renaissance of Perl
+  type: grassroot
+  url: http://conferences.yapceurope.org/ye2010/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 06/02/2010
+  begin: 0:0:0 26/06/2010
+  country_code: be
+  city: Brussels
+  conf_id: bpw2010
+  continent: Europe
+  country: Belgium
+  edition: 2010
+  end: 0:0:0 26/06/2010
+  genre: workshop
+  languages:
+    - English
+    - French
+    - Dutch
+  lc:
+    - en
+    - fr
+    - nl
+  name: Belgian Perl Workshop
+  status: ok
+  syndicate: belgian_perl_workshop
+  type: grassroot
+  url: http://www.perlworkshop.be/bpw2010/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 28/01/2010
+  begin: 0:0:0 21/06/2010
+  country_code: us
+  city: 'Columbus, OH'
+  conf_id: yn2010
+  continent: America
+  country: United States
+  edition: 2010
+  end: 0:0:0 23/06/2010
+  genre: yapc
+  languages:
+    - English
+  lc:
+    - en
+  name: YAPC North America
+  status: ok
+  syndicate: yapc_north_america
+  type: grassroot
+  url: http://conferences.mongueurs.net/yn2010/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 16/02/2010
+  begin: 0:0:0 12/06/2010
+  country_code: ua
+  city: Kiev
+  conf_id: yr2010
+  continent: Europe
+  country: Ukraine
+  edition: 2010
+  end: 0:0:0 14/06/2010
+  genre: workshop
+  languages:
+    - Ukrainian
+    - Russian
+    - English
+  lc:
+    - uk
+    - ru
+    - en
+  name: Perl Mova + YAPC Russia
+  status: ok
+  syndicate: perl_mova___yapc_russia
+  type: grassroot
+  url: http://social.yapcrussia.org/yr2010/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 08/03/2010
+  begin: 0:0:0 11/06/2010
+  country_code: fr
+  city: Calais
+  conf_id: fpw2010
+  continent: Europe
+  country: France
+  edition: 2010
+  end: 0:0:0 12/06/2010
+  genre: workshop
+  languages:
+    - French
+    - English
+  lc:
+    - fr
+    - en
+  name: French Perl Workshop
+  status: ok
+  syndicate: french_perl_workshop
+  type: grassroot
+  url: http://journeesperl.fr/fpw2010/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 16/11/2009
+  begin: 0:0:0 07/06/2010
+  country_code: de
+  city: Shorndorf
+  conf_id: gpw2010
+  continent: Europe
+  country: Germany
+  edition: 2010
+  end: 0:0:0 09/06/2010
+  genre: workshop
+  languages:
+    - German
+    - English
+  lc:
+    - de
+    - en
+  name: German Perl Workshop
+  status: ok
+  syndicate: german_perl_workshop
+  type: grassroot
+  url: http://conferences.yapceurope.org/gpw2010/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 20/01/2010
+  begin: 0:0:0 04/06/2010
+  country_code: pt
+  city: Porto
+  conf_id: ptpw2010
+  continent: Europe
+  country: Portugal
+  edition: 2010
+  end: 0:0:0 05/06/2010
+  genre: workshop
+  languages:
+    - Portuguese
+    - English
+  lc:
+    - pt
+    - en
+  name: Portuguese Perl Workshop
+  status: ok
+  syndicate: portuguese_perl_workshop
+  type: grassroot
+  url: http://workshop.perl.pt/ptpw2010/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 22/01/2010
+  begin: 0:0:0 10/04/2010
+  country_code: at
+  city: Vienna
+  conf_id: qa2010
+  continent: Europe
+  cost:
+    regular: 0
+  country: Austria
+  edition: 2010
+  end: 0:0:0 12/04/2010
+  genre: hackathon
+  name: Perl QA Hackathon
+  status: ok
+  syndicate: perl_qa_hackathon
+  type: grassroot
+  url: http://2010.qa-hackathon.org/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 27/01/2010
+  begin: 0:0:0 06/03/2010
+  country_code: dk
+  city: Copenhagen
+  conf_id: hack2010dk
+  continent: Europe
+  cost:
+    regular: 0
+  country: Denmark
+  edition: 2010
+  end: 0:0:0 06/03/2010
+  genre: hackathon
+  languages:
+    - English
+  lc:
+    - en
+  name: Copenhagen Perl 6 Hackathon
+  part_of: Open Source Days
+  part_of_url: http://www.opensourcedays.org/2010/
+  status: ok
+  syndicate: copenhagen_perl_6_hackathon
+  theme: Perl 6 Hackathon
+  type: grassroot
+  url: http://conferences.yapceurope.org/hack2010dk/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 06/11/2009
+  begin: 0:0:0 05/03/2010
+  country_code: nl
+  city: Arnhem
+  conf_id: nlpw2010
+  continent: Europe
+  cost:
+    business: 100 EUR
+    regular: 75 EUR
+    speaker: 38 EUR
+  country: Netherlands
+  edition: 2010
+  end: 0:0:0 05/03/2010
+  genre: workshop
+  languages:
+    - Dutch
+    - English
+  lc:
+    - nl
+    - en
+  name: Dutch Perl Workshop
+  status: ok
+  syndicate: dutch_perl_workshop
+  type: grassroot
+  url: http://www.perlworkshop.nl/nlpw2010/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 04/11/2009
+  begin: 0:0:0 06/02/2010
+  country_code: us
+  city: 'Minneapolis, MN'
+  conf_id: mpw2010
+  continent: America
+  country: United States
+  edition: 2010
+  end: 0:0:0 06/02/2010
+  genre: workshop
+  name: Frozen Perl
+  status: ok
+  syndicate: frozen_perl
+  type: grassroot
+  url: http://www.frozen-perl.org/mpw2010/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 19/11/2009
+  begin: 0:0:0 30/01/2010
+  country_code: bg
+  city: Sofia
+  conf_id: sofia2010
+  continent: Europe
+  cost:
+    regular: 0
+  country: Bulgaria
+  edition: 2010
+  end: 0:0:0 30/01/2010
+  genre: workshop
+  languages:
+    - Bulgarian
+    - English
+  lc:
+    - bg
+    - en
+  name: Bulgarian Perl Workshop
+  nickname: BG Perl
+  status: ok
+  syndicate: bulgarian_perl_workshop
+  type: grassroot
+  url: http://event.perlbulgaria.org/sofia2010/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 05/11/2009
+  begin: 0:0:0 16/01/2010
+  country_code: us
+  city: 'Orlando, FL'
+  conf_id: opw2010
+  continent: America
+  country: United States
+  edition: 2010
+  end: 0:0:0 16/01/2010
+  genre: workshop
+  languages:
+    - English
+  lc:
+    - en
+  name: Orlando Perl Workshop
+  nickname: The Perl Oasis
+  status: ok
+  syndicate: orlando_perl_workshop
+  type: grassroot
+  url: http://perloasis.org/opw2010/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 19/09/2009
+  begin: 0:0:0 05/12/2009
+  country_code: gb
+  city: London
+  conf_id: lpw2009
+  continent: Europe
+  cost:
+    regular: 0
+  country: United Kingdom
+  edition: 2009
+  end: 0:0:0 05/12/2009
+  genre: workshop
+  languages:
+    - English
+  lc:
+    - en
+  name: London Perl Workshop
+  status: ok
+  syndicate: london_perl_workshop
+  type: grassroot
+  url: http://conferences.yapceurope.org/lpw2009/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 23/06/2009
+  begin: 0:0:0 21/11/2009
+  country_code: lv
+  city: Riga
+  conf_id: baltic2009
+  continent: Europe
+  country: Latvia
+  edition: 2009
+  end: 0:0:0 21/11/2009
+  genre: workshop
+  languages:
+    - English
+  lc:
+    - en
+  name: Baltic Perl Workshop
+  status: ok
+  syndicate: baltic_perl_workshop
+  type: grassroot
+  url: http://conferences.yapceurope.org/baltic2009/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 18/05/2009
+  begin: 0:0:0 22/10/2009
+  country_code: it
+  city: Pisa
+  conf_id: ipw2009
+  continent: Europe
+  country: Italy
+  edition: 2009
+  end: 0:0:0 23/10/2009
+  genre: workshop
+  languages:
+    - Italian
+    - English
+  lc:
+    - it
+    - en
+  name: Italian Perl Workshop
+  status: ok
+  syndicate: italian_perl_workshop
+  type: grassroot
+  url: http://conferences.yapceurope.org/ipw2009/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 16/08/2009
+  begin: 0:0:0 17/10/2009
+  country_code: by
+  city: Minsk
+  conf_id: minsk2009
+  continent: Europe
+  country: Belarus
+  edition: 2009
+  end: 0:0:0 17/10/2009
+  genre: workshop
+  languages:
+    - Belarusian
+    - Russian
+    - English
+  lc:
+    - be
+    - ru
+    - en
+  name: Belarusian Perl Workshop
+  nickname: BY Perl
+  status: ok
+  syndicate: belarusian_perl_workshop
+  type: grassroot
+  url: http://event.perlbelarus.org/minsk2009/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 18/05/2009
+  begin: 0:0:0 02/10/2009
+  country_code: fr
+  city: Paris
+  conf_id: osdc2009fr
+  continent: Europe
+  country: France
+  edition: 2009
+  end: 0:0:0 03/10/2009
+  genre: osdc
+  languages:
+    - French
+  lc:
+    - fr
+  name: OSDC.fr
+  status: ok
+  syndicate: osdc_fr
+  type: grassroot
+  url: http://act.osdc.fr/osdc2009fr/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 02/07/2009
+  begin: 0:0:0 19/09/2009
+  country_code: cn
+  city: Beijing
+  conf_id: bjpw2009
+  continent: Asia
+  country: China
+  edition: 2009
+  end: 0:0:0 19/09/2009
+  genre: workshop
+  name: Beijing Perl Workshop
+  status: ok
+  syndicate: beijing_perl_workshop
+  type: grassroot
+  url: http://conference.perlchina.org/bjpw2009/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 23/06/2009
+  begin: 0:0:0 10/09/2009
+  country_code: jp
+  city: Tokyo
+  conf_id: ya2009
+  continent: Asia
+  country: Japan
+  edition: 2009
+  end: 0:0:0 11/09/2009
+  genre: yapc
+  name: YAPC Asia
+  status: ok
+  syndicate: yapc_asia
+  type: grassroot
+  url: http://conferences.yapcasia.org/ya2009/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 30/10/2008
+  attendees: 332
+  begin: 0:0:0 03/08/2009
+  country_code: pt
+  city: Lisbon
+  conf_id: ye2009
+  continent: Europe
+  country: Portugal
+  edition: 2009
+  end: 0:0:0 05/08/2009
+  genre: yapc
+  languages:
+    - English
+  lc:
+    - en
+  name: YAPC Europe
+  status: ok
+  syndicate: yapc_europe
+  theme: Corporate Perl
+  type: grassroot
+  url: http://yapceurope2009.org/ye2009/
+  url_lanyrd: http://lanyrd.com/2009/yapceurope/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 02/03/2009
+  begin: 0:0:0 22/06/2009
+  country_code: us
+  city: 'Pittsburgh, PA'
+  conf_id: yn2009
+  continent: America
+  country: United States
+  edition: 2009
+  end: 0:0:0 24/06/2009
+  genre: yapc
+  languages:
+    - English
+  lc:
+    - en
+  name: YAPC North America
+  status: ok
+  syndicate: yapc_north_america
+  type: grassroot
+  url: http://yapc10.org/yn2009/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 20/01/2009
+  begin: 0:0:0 12/06/2009
+  country_code: fr
+  city: Paris
+  conf_id: fpw2009
+  continent: Europe
+  country: France
+  edition: 2009
+  end: 0:0:0 13/06/2009
+  genre: workshop
+  languages:
+    - French
+    - English
+  lc:
+    - fr
+    - en
+  name: French Perl Workshop
+  status: ok
+  syndicate: french_perl_workshop
+  type: grassroot
+  url: http://journeesperl.fr/fpw2009/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 13/08/2008
+  begin: 0:0:0 16/04/2009
+  country_code: no
+  city: Oslo
+  conf_id: npw2009
+  continent: Europe
+  country: Norway
+  edition: 2009
+  end: 0:0:0 17/04/2009
+  genre: workshop
+  languages:
+    - English
+  lc:
+    - en
+  name: Nordic Perl Workshop
+  status: ok
+  syndicate: nordic_perl_workshop
+  type: grassroot
+  url: http://www.perlworkshop.no/npw2009/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 06/11/2008
+  begin: 0:0:0 07/03/2009
+  country_code: ua
+  city: Kiev
+  conf_id: upw2009
+  continent: Europe
+  country: Ukraine
+  edition: 2009
+  end: 0:0:0 07/03/2009
+  genre: workshop
+  languages:
+    - Ukrainian
+    - Russian
+    - English
+  lc:
+    - uk
+    - ru
+    - en
+  name: Ukrainian Perl Workshop
+  nickname: Perl Mova
+  status: ok
+  syndicate: ukrainian_perl_workshop
+  type: grassroot
+  url: http://event.perlukraine.org/upw2009/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 05/01/2009
+  begin: 0:0:0 06/03/2009
+  country_code: nl
+  city: Arnhem
+  conf_id: nlpw2009
+  continent: Europe
+  country: Netherlands
+  edition: 2009
+  end: 0:0:0 06/03/2009
+  genre: workshop
+  languages:
+    - Dutch
+    - English
+  lc:
+    - nl
+    - en
+  name: Dutch Perl Workshop
+  status: ok
+  syndicate: dutch_perl_workshop
+  type: grassroot
+  url: http://www.perlworkshop.nl/nlpw2009/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 15/12/2008
+  begin: 0:0:0 28/02/2009
+  country_code: be
+  city: Leuven
+  conf_id: bpw2009
+  continent: Europe
+  country: Belgium
+  edition: 2009
+  end: 0:0:0 28/02/2009
+  genre: workshop
+  languages:
+    - English
+    - French
+    - Dutch
+  lc:
+    - en
+    - fr
+    - nl
+  name: Belgian Perl Workshop
+  status: ok
+  syndicate: belgian_perl_workshop
+  type: grassroot
+  url: http://www.perlworkshop.be/bpw2009/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 16/01/2009
+  begin: 0:0:0 25/02/2009
+  country_code: de
+  city: Frankfurt/Main
+  conf_id: gpw2009
+  continent: Europe
+  country: Germany
+  edition: 2009
+  end: 0:0:0 27/02/2009
+  genre: workshop
+  languages:
+    - German
+    - English
+  lc:
+    - de
+    - en
+  name: German Perl Workshop
+  status: ok
+  syndicate: german_perl_workshop
+  type: grassroot
+  url: http://conferences.yapceurope.org/gpw2009/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 29/08/2008
+  begin: 0:0:0 07/02/2009
+  country_code: us
+  city: 'Minneapolis, MN'
+  conf_id: mpw2009
+  continent: America
+  country: United States
+  edition: 2009
+  end: 0:0:0 07/02/2009
+  genre: workshop
+  name: Frozen Perl
+  status: ok
+  syndicate: frozen_perl
+  type: grassroot
+  url: http://www.frozen-perl.org/mpw2009/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 17/12/2008
+  begin: 0:0:0 31/01/2009
+  country_code: bg
+  city: Sofia
+  conf_id: sofia2009
+  continent: Europe
+  cost:
+    regular: 0
+  country: Bulgaria
+  edition: 2009
+  end: 0:0:0 31/01/2009
+  genre: workshop
+  languages:
+    - Bulgarian
+    - English
+  lc:
+    - bg
+    - en
+  name: Bulgarian Perl Workshop
+  nickname: BG Perl
+  status: ok
+  syndicate: bulgarian_perl_workshop
+  type: grassroot
+  url: http://event.perlbulgaria.org/sofia2009/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 28/10/2008
+  begin: 0:0:0 17/01/2009
+  country_code: us
+  city: 'Orlando, FL'
+  conf_id: opw2009
+  continent: America
+  country: United States
+  edition: 2009
+  end: 0:0:0 17/01/2009
+  genre: workshop
+  languages:
+    - English
+  lc:
+    - en
+  name: Orlando Perl Workshop
+  nickname: The Perl Oasis
+  status: ok
+  syndicate: orlando_perl_workshop
+  type: grassroot
+  url: http://perloasis.org/opw2009/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 15/08/2008
+  begin: 0:0:0 29/11/2008
+  country_code: gb
+  city: London
+  conf_id: lpw2008
+  continent: Europe
+  cost:
+    regular: 0
+  country: United Kingdom
+  edition: 2008
+  end: 0:0:0 29/11/2008
+  genre: workshop
+  languages:
+    - English
+  lc:
+    - en
+  name: London Perl Workshop
+  status: ok
+  syndicate: london_perl_workshop
+  type: grassroot
+  url: http://conferences.yapceurope.org/lpw2008/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 25/09/2008
+  begin: 0:0:0 08/11/2008
+  country_code: cn
+  city: Beijing
+  conf_id: bjpw2008
+  continent: Asia
+  country: China
+  edition: 2008
+  end: 0:0:0 08/11/2008
+  genre: workshop
+  name: Beijing Perl Workshop
+  status: ok
+  syndicate: beijing_perl_workshop
+  type: grassroot
+  url: http://conference.perlchina.org/bjpw2008/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 05/09/2008
+  begin: 0:0:0 07/11/2008
+  country_code: at/sk
+  city: Vienna/Bratislava
+  conf_id: tcpw2008
+  continent: Europe
+  country: Austria/Slovakia
+  edition: 2008
+  end: 0:0:0 08/11/2008
+  genre: workshop
+  name: TwinCity Perl Workshop
+  status: ok
+  syndicate: twincity_perl_workshop
+  type: grassroot
+  url: http://conferences.yapceurope.org/tcpw2008/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 29/08/2008
+  begin: 0:0:0 02/11/2008
+  country_code: ru
+  city: Rostov on Don
+  conf_id: rpw2008
+  continent: Europe
+  country: Russia
+  edition: 2008
+  end: 0:0:0 02/11/2008
+  genre: workshop
+  languages:
+    - Russian
+  lc:
+    - ru
+  name: Russian Perl Workshop
+  nickname: South Perl
+  status: ok
+  syndicate: russian_perl_workshop
+  type: grassroot
+  url: http://event.perlrussia.ru/rpw2008/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 12/04/2008
+  begin: 0:0:0 18/10/2008
+  country_code: by
+  city: Minsk
+  conf_id: minsk2008
+  continent: Europe
+  country: Belarus
+  edition: 2008
+  end: 0:0:0 18/10/2008
+  genre: workshop
+  languages:
+    - Belarusian
+    - Russian
+    - English
+  lc:
+    - be
+    - ru
+    - en
+  name: Belarusian Perl Workshop
+  nickname: BY Perl
+  status: ok
+  syndicate: belarusian_perl_workshop
+  type: grassroot
+  url: http://event.perlbelarus.org/minsk2008/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 15/07/2008
+  begin: 0:0:0 11/10/2008
+  country_code: us
+  city: 'Pittsburgh, PA'
+  conf_id: ppw2008
+  continent: America
+  country: United States
+  edition: 2008
+  end: 0:0:0 12/10/2008
+  genre: workshop
+  name: Pittsburgh Perl Workshop
+  status: ok
+  syndicate: pittsburgh_perl_workshop
+  type: grassroot
+  url: http://pghpw.org/ppw2008/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 30/06/2008
+  begin: 0:0:0 26/09/2008
+  country_code: ru
+  city: Vladivostok
+  conf_id: fe2008
+  continent: Europe
+  cost:
+    regular: 0
+  country: Russia
+  edition: 2008
+  end: 0:0:0 26/09/2008
+  genre: workshop
+  name: Far East Perl Workshop
+  status: ok
+  syndicate: far_east_perl_workshop
+  type: grassroot
+  url: http://event.perlrussia.ru/fe2008/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 10/03/2008
+  begin: 0:0:0 18/09/2008
+  country_code: it
+  city: Pisa
+  conf_id: ipw2008
+  continent: Europe
+  cost:
+    regular: 0
+  country: Italy
+  edition: 2008
+  end: 0:0:0 19/09/2008
+  genre: workshop
+  languages:
+    - Italian
+    - English
+  lc:
+    - it
+    - en
+  name: Italian Perl Workshop
+  status: ok
+  syndicate: italian_perl_workshop
+  type: grassroot
+  url: http://conferences.yapceurope.org/ipw2008/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 01/12/2007
+  attendees: 286
+  begin: 0:0:0 13/08/2008
+  country_code: dk
+  city: Copenhagen
+  conf_id: ye2008
+  continent: Europe
+  country: Denmark
+  edition: 2008
+  end: 0:0:0 15/08/2008
+  genre: yapc
+  languages:
+    - English
+  lc:
+    - en
+  name: YAPC Europe
+  status: ok
+  syndicate: yapc_europe
+  theme: Beautiful Perl
+  type: grassroot
+  url: http://conferences.yapceurope.org/ye2008
+  url_lanyrd: http://lanyrd.com/2008/yapceurope/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 17/12/2007
+  begin: 0:0:0 16/06/2008
+  country_code: us
+  city: 'Chicago, IL'
+  conf_id: yn2008
+  continent: America
+  country: United States
+  edition: 2008
+  end: 0:0:0 18/06/2008
+  genre: yapc
+  name: YAPC North America
+  status: ok
+  syndicate: yapc_north_america
+  type: grassroot
+  url: http://conferences.mongueurs.net/yn2008/
+  url_lanyrd: http://lanyrd.com/2008/yapcna/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 11/02/2008
+  begin: 0:0:0 06/06/2008
+  country_code: pt
+  city: Braga
+  conf_id: ptpw2008
+  continent: Europe
+  country: Portugal
+  edition: 2008
+  end: 0:0:0 07/06/2008
+  genre: workshop
+  languages:
+    - Portuguese
+    - English
+  lc:
+    - pt
+    - en
+  name: Portuguese Perl Workshop
+  status: ok
+  syndicate: portuguese_perl_workshop
+  type: grassroot
+  url: http://workshop.perl.pt/ptpw2008/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 17/03/2008
+  begin: 0:0:0 30/05/2008
+  country_code: fr
+  city: Albi
+  conf_id: fpw2008
+  continent: Europe
+  cost:
+    reduced: 15 EUR
+    regular: 30 EUR
+  country: France
+  edition: 2008
+  end: 0:0:0 31/05/2008
+  genre: workshop
+  languages:
+    - French
+    - English
+  lc:
+    - fr
+    - en
+  name: French Perl Workshop
+  status: ok
+  syndicate: french_perl_workshop
+  type: grassroot
+  url: http://journeesperl.fr/fpw2008/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 13/04/2008
+  begin: 0:0:0 24/05/2008
+  country_code: se
+  city: Stockholm
+  conf_id: npw2008
+  continent: Europe
+  country: Sweden
+  edition: 2008
+  end: 0:0:0 25/05/2008
+  genre: workshop
+  name: Nordic Perl Workshop
+  status: ok
+  syndicate: nordic_perl_workshop
+  type: grassroot
+  url: http://conferences.yapceurope.org/npw2008/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 27/11/2007
+  begin: 0:0:0 17/05/2008
+  country_code: ru
+  city: Moscow
+  conf_id: yr2008
+  continent: Europe
+  country: Russia
+  edition: 2008
+  end: 0:0:0 18/05/2008
+  genre: yapc
+  name: YAPC Russia
+  nickname: May Perl
+  status: ok
+  syndicate: yapc_russia
+  type: grassroot
+  url: http://event.perlrussia.ru/yr2008/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 06/02/2008
+  begin: 0:0:0 15/05/2008
+  country_code: jp
+  city: Tokyo
+  conf_id: ya2008
+  continent: Asia
+  country: Japan
+  edition: 2008
+  end: 0:0:0 16/05/2008
+  genre: yapc
+  name: YAPC Asia
+  status: ok
+  syndicate: yapc_asia
+  type: grassroot
+  url: http://conferences.yapcasia.org/ya2008/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 11/04/2008
+  begin: 0:0:0 15/04/2008
+  country_code: hr
+  city: Zagreb
+  conf_id: hrpw2008
+  continent: Europe
+  country: Croatia
+  edition: 2008
+  end: 0:0:0 15/04/2008
+  genre: workshop
+  languages:
+    - Croatian
+    - English
+  lc:
+    - hr
+    - en
+  name: Croatian Perl Workshop
+  status: ok
+  syndicate: croatian_perl_workshop
+  type: grassroot
+  url: http://conferences.yapceurope.org/hrpw2008/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 28/11/2007
+  begin: 0:0:0 23/02/2008
+  country_code: ua
+  city: Kiev
+  conf_id: upw2008
+  continent: Europe
+  country: Ukraine
+  edition: 2008
+  end: 0:0:0 23/02/2008
+  genre: workshop
+  languages:
+    - Ukrainian
+    - Russian
+    - English
+  lc:
+    - uk
+    - ru
+    - en
+  name: Ukrainian Perl Workshop
+  nickname: Perl Mova
+  status: ok
+  syndicate: ukrainian_perl_workshop
+  type: grassroot
+  url: http://event.perlukraine.org/upw2008/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 01/09/2007
+  begin: 0:0:0 16/02/2008
+  country_code: us
+  city: 'Minneapolis, MN'
+  conf_id: mpw2008
+  continent: America
+  country: United States
+  edition: 2008
+  end: 0:0:0 16/02/2008
+  genre: workshop
+  name: Frozen Perl
+  status: ok
+  syndicate: frozen_perl
+  type: grassroot
+  url: http://www.frozen-perl.org/mpw2008/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 15/09/2007
+  begin: 0:0:0 31/12/2007
+  country_code: il
+  city: Ramat Efal
+  conf_id: ilpw2007
+  continent: Asia
+  country: Israel
+  edition: 2007
+  end: 0:0:0 31/12/2007
+  genre: workshop
+  languages:
+    - Hebrew
+    - English
+  lc:
+    - he
+    - en
+  name: Perl Workshop in Israel
+  status: ok
+  syndicate: perl_workshop_in_israel
+  type: grassroot
+  url: http://act.perl.org.il/ilpw2007/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 04/10/2007
+  begin: 0:0:0 01/12/2007
+  country_code: gb
+  city: London
+  conf_id: lpw2007
+  continent: Europe
+  cost:
+    regular: 0
+  country: United Kingdom
+  edition: 2007
+  end: 0:0:0 01/12/2007
+  genre: workshop
+  languages:
+    - English
+  lc:
+    - en
+  name: London Perl Workshop
+  status: ok
+  syndicate: london_perl_workshop
+  type: grassroot
+  url: http://conferences.yapceurope.org/lpw2007/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 29/08/2007
+  begin: 0:0:0 16/11/2007
+  country_code: fr
+  city: Lyon
+  conf_id: fpw2007
+  continent: Europe
+  cost:
+    reduced: 15 EUR
+    regular: 30 EUR
+  country: France
+  edition: 2007
+  end: 0:0:0 17/11/2007
+  genre: workshop
+  languages:
+    - French
+    - English
+  lc:
+    - fr
+    - en
+  name: French Perl Workshop
+  status: ok
+  syndicate: french_perl_workshop
+  type: grassroot
+  url: http://journeesperl.fr/fpw2007/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 12/09/2007
+  begin: 0:0:0 27/10/2007
+  country_code: be
+  city: Brussels
+  conf_id: bpw2007
+  continent: Europe
+  country: Belgium
+  edition: 2007
+  end: 0:0:0 27/10/2007
+  genre: workshop
+  languages:
+    - English
+    - French
+    - Dutch
+  lc:
+    - en
+    - fr
+    - nl
+  name: Belgian Perl Workshop
+  status: ok
+  syndicate: belgian_perl_workshop
+  type: grassroot
+  url: http://www.perlworkshop.be/bpw2007/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 22/06/2007
+  begin: 0:0:0 13/10/2007
+  country_code: us
+  city: 'Pittsburgh, PA'
+  conf_id: ppw2007
+  continent: America
+  country: United States
+  edition: 2007
+  end: 0:0:0 14/10/2007
+  genre: workshop
+  name: Pittsburgh Perl Workshop
+  status: ok
+  syndicate: pittsburgh_perl_workshop
+  type: grassroot
+  url: http://pghpw.org/ppw2007/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 15/11/2006
+  attendees: 340
+  begin: 0:0:0 28/08/2007
+  country_code: at
+  city: Vienna
+  conf_id: ye2007
+  continent: Europe
+  cost:
+    business: 200 EUR
+    reduced: 80 EUR
+    regular: 100 EUR
+  country: Austria
+  edition: 2007
+  end: 0:0:0 30/08/2007
+  genre: yapc
+  lanyrd_url: http://lanyrd.com/2007/yapceurope/
+  name: YAPC Europe
+  status: ok
+  syndicate: yapc_europe
+  theme: Social Perl
+  type: grassroot
+  url: http://conferences.yapceurope.org/2007/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 25/01/2007
+  begin: 0:0:0 25/06/2007
+  country_code: us
+  city: 'Houston, TX'
+  conf_id: yn2007
+  continent: America
+  country: United States
+  edition: 2007
+  end: 0:0:0 27/06/2007
+  genre: yapc
+  name: YAPC North America
+  status: ok
+  syndicate: yapc_north_america
+  type: grassroot
+  url: http://conferences.mongueurs.net/yn2007/
+  url_lanyrd: http://lanyrd.com/2007/yapcna/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 05/02/2007
+  begin: 0:0:0 28/04/2007
+  country_code: dk
+  city: Copenhagen
+  conf_id: npw2007
+  continent: Europe
+  country: Denmark
+  edition: 2007
+  end: 0:0:0 29/04/2007
+  genre: workshop
+  name: Nordic Perl Workshop
+  status: ok
+  syndicate: nordic_perl_workshop
+  type: grassroot
+  url: http://conferences.yapceurope.org/npw2007/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 27/01/2007
+  begin: 0:0:0 02/03/2007
+  country_code: nl
+  city: Arnhem
+  conf_id: hack2007nl
+  continent: Europe
+  country: Netherlands
+  edition: 2007
+  end: 0:0:0 04/03/2007
+  genre: hackathon
+  languages:
+    - Dutch
+    - English
+  lc:
+    - nl
+    - en
+  name: European Perl Hackathon
+  status: ok
+  syndicate: european_perl_hackathon
+  type: grassroot
+  url: http://conferences.yapceurope.org/hack2007nl/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 02/03/2006
+  begin: 0:0:0 25/11/2006
+  country_code: fr
+  city: Paris
+  conf_id: fpw2006
+  continent: Europe
+  cost:
+    reduced: 15 EUR
+    regular: 25 EUR
+  country: France
+  edition: 2006
+  end: 0:0:0 26/11/2006
+  genre: workshop
+  languages:
+    - French
+    - English
+  lc:
+    - fr
+    - en
+  name: French Perl Workshop
+  status: ok
+  syndicate: french_perl_workshop
+  type: grassroot
+  url: http://journeesperl.fr/fpw2006/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 26/02/2006
+  begin: 0:0:0 22/06/2006
+  country_code: it
+  city: Pisa
+  conf_id: ipw2006
+  continent: Europe
+  cost:
+    regular: 0
+  country: Italy
+  edition: 2006
+  end: 0:0:0 23/06/2006
+  genre: workshop
+  name: Italian Perl Workshop
+  status: ok
+  syndicate: italian_perl_workshop
+  type: grassroot
+  url: http://conferences.yapceurope.org/ipw2006/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 04/05/2006
+  begin: 0:0:0 15/06/2006
+  country_code: no
+  city: Oslo
+  conf_id: npw2006
+  continent: Europe
+  country: Norway
+  edition: 2006
+  end: 0:0:0 16/06/2006
+  genre: workshop
+  languages:
+    - English
+  lc:
+    - en
+  name: Nordic Perl Workshop
+  status: ok
+  syndicate: nordic_perl_workshop
+  type: grassroot
+  url: http://www.perlworkshop.no/npw2006/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 09/05/2006
+  begin: 0:0:0 08/06/2006
+  country_code: at
+  city: Vienna
+  conf_id: apw2006
+  continent: Europe
+  country: Austria
+  edition: 2006
+  end: 0:0:0 09/06/2006
+  genre: workshop
+  languages:
+    - German
+    - English
+  lc:
+    - de
+    - en
+  name: Austrian Perl Workshop
+  status: ok
+  syndicate: austrian_perl_workshop
+  type: grassroot
+  url: http://conferences.yapceurope.org/apw2006/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 06/10/2005
+  begin: 0:0:0 22/10/2005
+  country_code: se
+  city: Stockholm
+  conf_id: npw2005
+  continent: Europe
+  country: Sweden
+  edition: 2005
+  end: 0:0:0 23/10/2005
+  genre: workshop
+  name: Nordic Perl Workshop
+  status: ok
+  syndicate: nordic_perl_workshop
+  type: grassroot
+  url: http://www.perlworkshop.no/2005/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 06/10/2005
+  begin: 0:0:0 22/10/2005
+  country_code: hu
+  city: Budapest
+  conf_id: hpw2005
+  continent: Europe
+  country: Hungary
+  edition: 2005
+  end: 0:0:0 22/10/2005
+  genre: workshop
+  languages:
+    - Hungarian
+    - English
+  lc:
+    - hu
+    - en
+  name: Hungarian Perl Workshop
+  status: ok
+  syndicate: hungarian_perl_workshop
+  type: grassroot
+  url: http://conferences.yapceurope.org/hpw2005/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 22/03/2005
+  attendees: 215
+  begin: 0:0:0 31/08/2005
+  country_code: pt
+  city: Braga
+  conf_id: ye2005
+  continent: Europe
+  cost:
+    regular: 89 EUR
+  country: Portugal
+  edition: 2005
+  end: 0:0:0 02/09/2005
+  genre: yapc
+  name: YAPC Europe
+  status: ok
+  syndicate: yapc_europe
+  theme: Perl Everywhere
+  type: grassroot
+  url: http://conferences.yapceurope.org/ye2005/
+  url_lanyrd: http://lanyrd.com/2005/yapceurope/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 12/04/2005
+  begin: 0:0:0 23/06/2005
+  country_code: it
+  city: Pisa
+  conf_id: ipw2005
+  continent: Europe
+  cost:
+    reduced: 35 EUR
+    regular: 50 EUR
+  country: Italy
+  edition: 2005
+  end: 0:0:0 24/06/2005
+  genre: workshop
+  name: Italian Perl Workshop
+  status: ok
+  syndicate: italian_perl_workshop
+  type: grassroot
+  url: http://conferences.yapceurope.org/ipw2005/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 22/03/2005
+  begin: 0:0:0 09/06/2005
+  country_code: fr
+  city: Marseilles
+  conf_id: fpw2005
+  continent: Europe
+  cost:
+    reduced: 15 EUR
+    regular: 25 EUR
+  country: France
+  edition: 2005
+  end: 0:0:0 10/06/2005
+  genre: workshop
+  languages:
+    - French
+  lc:
+    - fr
+  name: French Perl Workshop
+  status: ok
+  syndicate: french_perl_workshop
+  type: grassroot
+  url: http://conferences.mongueurs.net/2005/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 22/03/2005
+  begin: 0:0:0 09/06/2005
+  country_code: at
+  city: Vienna
+  conf_id: apw2005
+  continent: Europe
+  country: Austria
+  edition: 2005
+  end: 0:0:0 10/06/2005
+  genre: workshop
+  languages:
+    - German
+    - English
+  lc:
+    - de
+    - en
+  name: Austrian Perl Workshop
+  status: ok
+  syndicate: austrian_perl_workshop
+  type: grassroot
+  url: http://conferences.yapceurope.org/apw2005/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 04/03/2004
+  begin: 0:0:0 06/06/2004
+  country_code: fr
+  city: Paris
+  conf_id: fpw2004
+  continent: Europe
+  cost:
+    reduced: 15 EUR
+    regular: 25 EUR
+  country: France
+  edition: 2004
+  end: 0:0:0 07/06/2004
+  genre: workshop
+  languages:
+    - French
+    - English
+  lc:
+    - fr
+    - en
+  name: French Perl Workshop
+  status: ok
+  syndicate: french_perl_workshop
+  type: grassroot
+  url: http://conferences.mongueurs.net/2004/
+- act_instance: mongueurs.net
+  act_open: 0:0:0 14/04/2003
+  attendees: 220
+  begin: 0:0:0 23/07/2003
+  country_code: fr
+  city: Paris
+  conf_id: ye2003
+  continent: Europe
+  cost:
+    regular: 99 EUR
+  country: France
+  edition: 2003
+  end: 0:0:0 25/07/2003
+  genre: yapc
+  name: YAPC Europe
+  status: ok
+  syndicate: yapc_europe
+  type: grassroot
+  url: http://conferences.yapceurope.org/2003/
+  url_lanyrd: http://lanyrd.com/2003/yapceurope/

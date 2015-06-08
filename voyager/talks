@@ -19,7 +19,7 @@ my $talks_set = $ActSchema
   ->resultset('Talk')
   ->search( undef, { order_by => 'talk_id' });
 
-# use DDP; p $talks_set;
+use DDP; p $talks_set;
 
 my $talk;
 my $talk__abstract;
@@ -38,14 +38,14 @@ Conf_id   : @>>>>>>>>>> Syndicate : @<<<<<<<<<< Edition   : @<<<<<<<<<<
             $talk->conf_id,         $talk__syndicate,     $talk__edition
 User_id   : @>>>>>>>>>> Full Name : @<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<...
             $talk->user_id,         $talk__user
-Language  : @<<<<<<<<<<
-            $talk->lang
+Language  : @<<<<<<<<<< Target    : @<          Accepted  : @<         
+            $talk->lang,            $talk->datetime,        $talk->accepted
+DateTime  : @<<<<<<<<<<<<<<<<<<<< : @>>>min.    Room      : @<<<<<<<<<<
+$talk->datetime,                    $talk->duration         $talk->room
 Abstract  : ^<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
             $talk__abstract
             ^<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< ~~
             $talk__abstract
-Duration  : @>>>>> mins
-
 
 .
 

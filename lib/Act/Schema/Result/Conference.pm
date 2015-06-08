@@ -31,6 +31,17 @@ column "conf_id" => {
     data_type          => 'text',
 };
 
+=head2 url
+
+Main conference website
+
+=cut
+
+column "url" => {
+    data_type          => 'text',
+    is_nullable        => 1,
+};
+
 =head2 syndicate
 
 Act enables delegation of administration, a syndicate can autonomous create instances
@@ -40,6 +51,7 @@ of a community event.
 
 column "syndicate" => {
     data_type          => 'text',
+    is_nullable        => 1,
 };
 
 =head2 edition
@@ -50,6 +62,95 @@ An edition is a delegated community event, under authority of previous mentioned
 
 column "edition" => {
     data_type          => 'text',
+    is_nullable        => 1,
+};
+
+=head2 name
+
+Conference name
+
+=cut
+
+column "name" => {
+    data_type          => 'text',
+    is_nullable        => 1,
+};
+
+=head2 nickname
+
+Conference nick name
+
+=cut
+
+column "nickname" => {
+    data_type          => 'text',
+    is_nullable        => 1,
+};
+
+=head2 theme
+
+Conference Theme
+
+=cut
+
+column "theme" => {
+    data_type          => 'text',
+    is_nullable        => 1,
+};
+
+=head2 genre
+
+Genre : workshop | hackathon | yapc | osdc
+
+=cut
+
+column "genre" => {
+    data_type          => 'text',
+    is_nullable        => 1,
+};
+
+=head2 continent
+
+The continent on which the event is being held
+
+=cut
+
+column "continent" => {
+    data_type          => 'text',
+    is_nullable        => 1,
+};
+
+=head2 country
+
+The country where the event is being held
+
+=cut
+
+column "country" => {
+    data_type          => 'text',
+    is_nullable        => 1,
+};
+
+=head2 city
+
+The city where the event is being held
+
+=cut
+
+column "city" => {
+    data_type          => 'text',
+    is_nullable        => 1,
+};
+
+=head2 country_code
+
+The international Country code (iso 3166)
+
+=cut
+
+column "country_code" => {
+    data_type          => 'text',
+    is_nullable        => 1,
 };
 
 =head1 PRIMARY KEY

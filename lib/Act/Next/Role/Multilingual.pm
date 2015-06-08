@@ -136,12 +136,11 @@ use JSON;
 
 sub _to_json {
   my $self = shift;
-use DDP; p $self;
   my $opts = shift;
   my @lang = (defined $opts and exists $opts->{'lang'}) ?
     $opts->{'lang'} : Act::Dancer2::Handler->_backup_languages;
   my $attr = {};
-  foreach my $attribute ($self->_RESOURCE_DATASTORE->attributes_simple) {
+  foreach my $attribute ($self->_RESOURCE_DATASTORE->_attributes_simple) {
     $attr->{$attribute} = $self->{$attribute};
   };
   foreach my $attribute ($self->_RESOURCE_DATASTORE->attributes_multilingual) {

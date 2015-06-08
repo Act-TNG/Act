@@ -27,8 +27,8 @@ use DDP; p $users_set;
 
 print "users list:\n";
 while ( my $user = $users_set->next ) {
-p $user{_column_data};
-# print $user->user_id, " ",$user->login, " ", $user->country, " ", $user->pause_id, "\n";
+# p $user{_column_data};
+print $user->passwd, " ", $user->user_id, " ",$user->login, "(", $user->passwd, ") ", $user->country, " ", $user->pause_id, "\n";
 # print $user->abstract, "\n" x2;
 };
 print "users total: ", $users_set->count, "\n";

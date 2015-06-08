@@ -2,6 +2,8 @@ package Act::Next::Object::Talk;
 
 use Moo;
 
+use constant _RESOURCE_DATASTORE => 'Act::Next::DataStore::Talks';
+
 with 'Act::Next::Role::Multilingual';
 extends "Act::Next::Object";
 
@@ -9,7 +11,7 @@ has '_proxy' => (
   is            => 'ro',
 );
 
-has '_ID' => (
+has '_INDEX' => (
   is            => 'ro',
 );
 
@@ -25,7 +27,7 @@ has 'duration' => (
   is            => 'ro'
 );
 
-has 'speaker' => (
+has 'speaker_id' => (
   is            => 'ro'
 );
 
