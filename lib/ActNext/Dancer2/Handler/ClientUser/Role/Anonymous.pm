@@ -1,11 +1,11 @@
-package Act::Dancer2::Handler::ClientUser::Role::Anonymous;
+package ActNext::Dancer2::Handler::ClientUser::Role::Anonymous;
 
 =head1 NAME
 
-Act::Dancer2::REST::ClientUser::Role::Anonymous
+ActNext::Dancer2::REST::ClientUser::Role::Anonymous
 
 the role that provides the attributes and roles for a
-C<Act::Dancer2::Handler::ClientUserr>.
+C<ActNext::Dancer2::Handler::ClientUserr>.
 This role is intended to be consumed dynamicly at instantion time.
 
 An api::ClientUser with only the anonymous role will be very limited in what

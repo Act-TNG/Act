@@ -1,4 +1,4 @@
-package Act::Next::Role::Multilingual;
+package ActNext::Object::Role::Multilingual;
 
 use Moo::Role;
 use List::Util 'first';
@@ -138,7 +138,7 @@ sub _to_json {
   my $self = shift;
   my $opts = shift;
   my @lang = (defined $opts and exists $opts->{'lang'}) ?
-    $opts->{'lang'} : Act::Dancer2::Handler->_backup_languages;
+    $opts->{'lang'} : ActNext::Dancer2::Handler->_backup_languages;
   my $attr = {};
   foreach my $attribute ($self->_RESOURCE_DATASTORE->_attributes_simple) {
     $attr->{$attribute} = $self->{$attribute};

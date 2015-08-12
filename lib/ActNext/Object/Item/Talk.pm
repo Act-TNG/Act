@@ -1,11 +1,11 @@
-package Act::Next::Object::Talk;
+package ActNext::Object::Item::Talk;
 
 use Moo;
 
-use constant _RESOURCE_DATASTORE => 'Act::Next::DataStore::Talks';
+use constant _RESOURCE_DATASTORE => 'ActNext::Object::DataStore::Talks';
 
-with 'Act::Next::Role::Multilingual';
-extends "Act::Next::Object";
+with 'ActNext::Object::Role::Multilingual';
+extends "ActNext::Object::Item";
 
 has '_proxy' => (
   is            => 'ro',

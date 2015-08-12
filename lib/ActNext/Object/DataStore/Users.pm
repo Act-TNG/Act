@@ -1,7 +1,7 @@
-package Act::Next::DataStore::Users;
+package ActNext::Object::DataStore::Users;
 
-use constant _RESOURCE_OBJECT   => "Act::Next::Object::User";
-use constant _RESOURCE_SET      => "Act::Next::Set::Users";
+use constant _OBJECT_ITEM       => "ActNext::Object::Item::User";
+use constant _OBJECT_SET        => "ActNext::Object::Set::Users";
 use constant _PRIMARY_RESULTSET => "User";
 use constant _PRIMARY_INDEX     => "user_id";
 use constant _ATTRIBUTES        => {
@@ -19,12 +19,12 @@ use constant _ATTRIBUTES        => {
 
 use Moo;
 
-extends 'Act::Next::DataStore';
+extends 'ActNext::Object::DataStore';
 
 use Class::Load 'load_class';
 
-load_class(_RESOURCE_OBJECT);
-load_class(_RESOURCE_SET);
+load_class(_OBJECT_ITEM);
+load_class(_OBJECT_SET);
 
 sub attributes_multilingual { (
     'biography', 
@@ -136,7 +136,7 @@ sub inflated_hash {
 sub new_from_primary_resultset_row {
   my $self = shift;
   my $prim = shift;
-  return _RESOURCE_OBJECT->new($self->inflated_hash($prim));
+  return _OBJECT_ITEM->new($self->inflated_hash($prim));
 }
 
 1;

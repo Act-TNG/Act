@@ -1,16 +1,16 @@
-package Act::Next;
+package ActNext::Object;
 
 use Moo;
 use MooX::Types::MooseLike::Base 'HashRef';
 
 use Class::Load 'load_class';
 
-use constant PACKAGE_DATASTORE  => 'Act::Next::DataStore';
-use constant PACKAGE_OBJECT     => 'Act::Next::Object';
-use constant PACKAGE_SET        => 'Act::Next::Set';
+use constant PACKAGE_DATASTORE  => 'ActNext::Object::DataStore';
+use constant PACKAGE_ITEM       => 'ActNext::Object::Item';
+use constant PACKAGE_SET        => 'ActNext::Object::Set';
 
 load_class(PACKAGE_DATASTORE);
-load_class(PACKAGE_OBJECT);
+load_class(PACKAGE_ITEM);
 load_class(PACKAGE_SET);
 
 use Act::Config;
@@ -55,25 +55,25 @@ sub resource {
     return $self->class_resource_datastore->{$name};
 };
 
-has class_resource_object => (
+has class_resource_item => (
     is      => 'rw',
     isa     => HashRef,
     default => sub { return { } },
 );
 
-sub object {
+sub item {
     my $self = shift;
     my $name = shift;
-    unless (exists $self->class_resource_object->{$name}) {
-        my $class_name = PACKAGE_OBJECT . "::" . $name;
+    unless (exists $self->class_resource_item->{$name}) {
+        my $class_name = PACKAGE_ITEM . "::" . $name;
         load_class($class_name);
-        $self->class_resource_object->{$name} = $class_name
+        $self->class_resource_item->{$name} = $class_name
             ->new({
                 storage_engine    => $self->storage_engine,
                 default_languages => $self->default_languages,
             });
     };
-    return $self->class_resource_object->{$name};
+    return $self->class_resource_item->{$name};
 };
 
 has class_resource_set => (
@@ -95,4 +95,3 @@ sub set {
 };
 
 1;
-

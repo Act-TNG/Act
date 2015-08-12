@@ -1,10 +1,10 @@
-package Act::Dancer2::Handler::ResourceRoot::Role::Syndicate;
+package ActNext::Dancer2::Handler::ResourceRoot::Role::Syndicate;
 
 =head1 NAME
 
-Act::Dancer2::Handler::ResourceRoot::Role::Syndicate
+ActNext::Dancer2::Handler::ResourceRoot::Role::Syndicate
 
-the role that provides the attribute for a C<Act::Dancer2::RootResource>.
+the role that provides the attribute for a C<ActNext::Dancer2::RootResource>.
 This role is intended to be consumed dynamicly at instantion time.
 
 Syndicate RootResources establish relations towards C<Edition>s. RootResources

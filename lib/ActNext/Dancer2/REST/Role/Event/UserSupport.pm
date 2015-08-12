@@ -1,8 +1,8 @@
-package Act::Dancer2::REST::Role::Event::UserSupport;
+package ActNext::Dancer2::REST::Role::Event::UserSupport;
 
 =head1 NAME
 
-Act::Dancer2::REST::Role::Event::UserSupport
+ActNext::Dancer2::REST::Role::Event::UserSupport
 
 The C<UserSupport> role provides an interface for ...
 

@@ -1,11 +1,11 @@
-package Act::Next::Object::User;
+package ActNext::Object::Item::User;
 
 use Moo;
 
-use constant _RESOURCE_DATASTORE => 'Act::Next::DataStore::Users';
+use constant _RESOURCE_DATASTORE => 'ActNext::Object::DataStore::Users';
 
-with 'Act::Next::Role::Multilingual';
-extends "Act::Next::Object";
+with 'ActNext::Object::Role::Multilingual';
+extends "ActNext::Object::Item";
 
 has '_proxy' => (
   is            => 'ro',

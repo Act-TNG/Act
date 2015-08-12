@@ -1,8 +1,8 @@
-package Act::Dancer2::REST::Role::Event::MainAdmin;
+package ActNext::Dancer2::REST::Role::Event::MainAdmin;
 
 =head1 NAME
 
-Act::Dancer2::REST::Role::Event::MainAdmin
+ActNext::Dancer2::REST::Role::Event::MainAdmin
 
 The C<MainAdmin> role provides an interface for all Main Admin's, specifacally
 assigning roles (or rights) to users to help organising a Community Event.

@@ -1,7 +1,7 @@
-package Act::Next::Object;
+package ActNext::Object::Item;
 
 use Moo;
-extends 'Act::Next';
+extends 'ActNext::Object';
 
 use Class::Load 'load_class';
 

@@ -1,8 +1,8 @@
-package Act::Dancer2::REST::Role::Event::Marketeer;
+package ActNext::Dancer2::REST::Role::Event::Marketeer;
 
 =head1 NAME
 
-Act::Dancer2::REST::Role::Event::Marketeer
+ActNext::Dancer2::REST::Role::Event::Marketeer
 
 The C<Marketeer> role provides an interface for those that need to be capable
 of creating News and  send out messages to (social) media.

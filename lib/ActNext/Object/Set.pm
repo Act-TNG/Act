@@ -1,4 +1,4 @@
-package Act::Next::Set;
+package ActNext::Object::Set;
 
 use Moo;
 

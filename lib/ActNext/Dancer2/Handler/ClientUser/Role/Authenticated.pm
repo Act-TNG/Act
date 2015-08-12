@@ -1,10 +1,10 @@
-package Act::Dancer2::Handler::ClientUser::Role::Authenticated;
+package ActNext::Dancer2::Handler::ClientUser::Role::Authenticated;
 
 =head1 NAME
 
-Act::Dancer2::Handler::ClientUser::Role::Authenticated
+ActNext::Dancer2::Handler::ClientUser::Role::Authenticated
 
-the role that provides the attribute for a C<Act::Dancer2::ClientUser>.
+the role that provides the attribute for a C<ActNext::Dancer2::ClientUser>.
 This role is intended to be consumed dynamicly at instantion time.
 
 The Authenticated role is the bare minimum for those that have provided valid

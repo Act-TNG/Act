@@ -1,8 +1,8 @@
-package Act::Dancer2::REST::Role::Event::Attendee;
+package ActNext::Dancer2::REST::Role::Event::Attendee;
 
 =head1 NAME
 
-Act::Dancer2::REST::Role::Event::Attendee
+ActNext::Dancer2::REST::Role::Event::Attendee
 
 the Attendee role is only applied for those Known ClientUsers that will
 actually visits a Community Event. 

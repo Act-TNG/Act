@@ -1,8 +1,8 @@
-package Act::Dancer2::Handler::ResourceRoot;
+package ActNext::Dancer2::Handler::ResourceRoot;
 
 =head1 NAME
 
-Act::Dancer2::Handler::ResourceRoot
+ActNext::Dancer2::Handler::ResourceRoot
 
 REST api requests are done within a context of a resource root and the user
 making the request. A ResourceRoot object usually has a Syndicate and an
@@ -61,19 +61,19 @@ sub new_from_http_request {
     
     if ($evnt) {
         Role::Tiny->apply_roles_to_object($resource_root,
-            ('Act::Dancer2::Handler::ResourceRoot::Role::Event'));
+            ('ActNext::Dancer2::Handler::ResourceRoot::Role::Event'));
     }
     elsif ($edtn) { # that is odd, how can a edition NOT be an event?
         Role::Tiny->apply_roles_to_object($resource_root,
-            ('Act::Dancer2::Handler::ResourceRoot::Role::Edition'));
+            ('ActNext::Dancer2::Handler::ResourceRoot::Role::Edition'));
     }
     elsif ($synd) {
         Role::Tiny->apply_roles_to_object($resource_root,
-            ('Act::Dancer2::Handler::ResourceRoot::Role::Syndicate'));
+            ('ActNext::Dancer2::Handler::ResourceRoot::Role::Syndicate'));
     }
     else {
         Role::Tiny->apply_roles_to_object($resource_root,
-            ('Act::Dancer2::Handler::ResourceRoot::Role::Resource'));
+            ('ActNext::Dancer2::Handler::ResourceRoot::Role::Resource'));
     };
     
     return $resource_root;

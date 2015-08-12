@@ -1,8 +1,8 @@
-package Act::Dancer2::REST::Role::Resource::Anonymous;
+package ActNext::Dancer2::REST::Role::Resource::Anonymous;
 
 =head1 NAME
 
-Act::Dancer2::REST::Role::Resource::Anonymous
+ActNext::Dancer2::REST::Role::Resource::Anonymous
 
 The C<Anonymous> role provides an interface for all ClientUsers
 

@@ -1,4 +1,4 @@
-package Act::Next::DataStore;
+package ActNext::Object::DataStore;
 
 use Moo;
 
@@ -35,7 +35,7 @@ sub export {
         ->search_rs(@keys) or return undef;
     
     # create the class set
-    return $clss->_RESOURCE_SET->new( { _proxy_set => $list } );
+    return $clss->_OBJECT_SET->new( { _proxy_set => $list } );
 };
 
 sub export_joined {
@@ -48,7 +48,7 @@ sub export_joined {
         ->search_rs(@keys, { join => $join }) or return undef;
     
     # create the class set
-    return $clss->_RESOURCE_SET->new( { _proxy_set => $list } );
+    return $clss->_OBJECT_SET->new( { _proxy_set => $list } );
 };
 
 sub entire { my $prompt = "ALL"; use DDP; p $prompt; return};

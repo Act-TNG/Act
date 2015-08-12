@@ -1,9 +1,9 @@
-package Act::Next::Set::Talks;
+package ActNext::Object::Set::Talks;
 
 use Moo;
 
-use constant _RESOURCE_DATASTORE => 'Act::Next::DataStore::Talks';
+use constant _RESOURCE_DATASTORE => 'ActNext::Object::DataStore::Talks';
 
-extends "Act::Next::Set";
+extends "ActNext::Object::Set";
 
 1;

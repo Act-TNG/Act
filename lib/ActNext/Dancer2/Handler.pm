@@ -1,8 +1,8 @@
-package Act::Dancer2::Handler;
+package ActNext::Dancer2::Handler;
 
 =head1 NAME
 
-Act::Dancer2::Handler;
+ActNext::Dancer2::Handler;
 
 The Handler object will have (after instantiation) one or more roles applied
 to it, so it knows which methods it can use on behalve of the ClientUser in the
@@ -12,7 +12,7 @@ Think of if like a total anonymous user, a signed-in user or a user that has
 specific roles been assigned to a specific Community Event, like Treasurer or
 Schedule manager.
 
-See C<Act::Dancer2::Handler::Role:: ...> for the various roles
+See C<ActNext::Dancer2::Handler::Role:: ...> for the various roles
 
 =cut
 
@@ -30,9 +30,9 @@ our $ActSchema = Act::Schema->connect(
 
 use Class::Load 'load_class';
 
-use constant PACKAGE_USER   => 'Act::Dancer2::Handler::ClientUser';
-use constant PACKAGE_ROOT   => 'Act::Dancer2::Handler::ResourceRoot';
-use constant PACKAGE_SELF   => 'Act::Dancer2::REST';
+use constant PACKAGE_USER   => 'ActNext::Dancer2::Handler::ClientUser';
+use constant PACKAGE_ROOT   => 'ActNext::Dancer2::Handler::ResourceRoot';
+use constant PACKAGE_SELF   => 'ActNext::Dancer2::REST';
 
 use constant LANGUAGES      => qw| en nl fr es de ru no |;
 
@@ -40,27 +40,27 @@ load_class PACKAGE_USER;
 load_class PACKAGE_ROOT;
 
 our $roles_event = {
-    admin       => [ 'Act::Dancer2::REST::Role::Event::MainAdmin' ],
-    users_admin => [ 'Act::Dancer2::REST::Role::Event::UserSupport' ],
+    admin       => [ 'ActNext::Dancer2::REST::Role::Event::MainAdmin' ],
+    users_admin => [ 'ActNext::Dancer2::REST::Role::Event::UserSupport' ],
     wiki_admin  => [ ],
     talks_admin => [ ],
-    news_admin  => [ 'Act::Dancer2::REST::Role::Event::Marketeer' ],
+    news_admin  => [ 'ActNext::Dancer2::REST::Role::Event::Marketeer' ],
     staff       => [ ],
-    treasurer   => [ 'Act::Dancer2::REST::Role::Event::Treasurer' ],
-    _anonymous_ => [ 'Act::Dancer2::REST::Role::Event::Anonymous' ],
-    _suspected_ => [ 'Act::Dancer2::REST::Role::Event::Suspected' ],
-    _authentic_ => [ 'Act::Dancer2::REST::Role::Event::Authentic' ],
+    treasurer   => [ 'ActNext::Dancer2::REST::Role::Event::Treasurer' ],
+    _anonymous_ => [ 'ActNext::Dancer2::REST::Role::Event::Anonymous' ],
+    _suspected_ => [ 'ActNext::Dancer2::REST::Role::Event::Suspected' ],
+    _authentic_ => [ 'ActNext::Dancer2::REST::Role::Event::Authentic' ],
 };
 
 our $roles_resource = {
-    _anonymous_ => [ 'Act::Dancer2::REST::Role::Resource::Anonymous' ],
-    _suspected_ => [ 'Act::Dancer2::REST::Role::Resource::Suspected' ],
-    _authentic_ => [ 'Act::Dancer2::REST::Role::Resource::Authentic' ],
+    _anonymous_ => [ 'ActNext::Dancer2::REST::Role::Resource::Anonymous' ],
+    _suspected_ => [ 'ActNext::Dancer2::REST::Role::Resource::Suspected' ],
+    _authentic_ => [ 'ActNext::Dancer2::REST::Role::Resource::Authentic' ],
 };
 
-use Act::Next;
+use ActNext::Object;
 
-our $_RESTapi = Act::Next->new( default_languages => [ 'en', 'nl', 'fr' ] );
+our $_RESTapi = ActNext::Object->new( default_languages => [ 'en', 'nl', 'fr' ] );
 
 has client_user => (
     is          => 'ro',
@@ -91,6 +91,12 @@ sub new_from_http_request {
         client_user   => $client_user,
     });
     
+    my @matrix = $ActSchema->resultset('Right')->search({
+#       conf_id => $resource_root->_act_conference->conf_id,
+        user_id => $client_user->_act_user->user_id
+    })->all;
+    use DDP; p @matrix;
+
     my @rights;
     if (
         $handler->root_does_role('Event')
@@ -101,6 +107,7 @@ sub new_from_http_request {
             conf_id => $resource_root->_act_conference->conf_id,
             user_id => $client_user->_act_user->user_id
         })->all;
+        use DDP; p @rights;
     }
     
     # Apply roles
@@ -174,9 +181,9 @@ sub resource_datastore {
     return $_RESTapi->resource_datastore(shift);
 }
 
-sub resource_object {
+sub resource_item {
     my $self = shift;
-    return $_RESTapi->resource_object(shift);
+    return $_RESTapi->resource_item(shift);
 }
 
 sub resource_set {

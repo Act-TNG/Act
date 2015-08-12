@@ -1,10 +1,10 @@
-package Act::Dancer2::Handler::ClientUser::Role::Suspected;
+package ActNext::Dancer2::Handler::ClientUser::Role::Suspected;
 
 =head1 NAME
 
-Act::Dancer2::Handler::CLientUser::Role::Suspected
+ActNext::Dancer2::Handler::CLientUser::Role::Suspected
 
-the role that provides the attribute for a C<Act::Dancer2::ClientUser>.
+the role that provides the attribute for a C<ActNext::Dancer2::ClientUser>.
 This role is intended to be consumed dynamicly at instantion time.
 
 The Suspected role will be applied for those that have provided invalid

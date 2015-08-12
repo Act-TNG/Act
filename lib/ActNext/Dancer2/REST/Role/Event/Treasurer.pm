@@ -1,8 +1,8 @@
-package Act::Dancer2::REST::Role::Event::Treasurer;
+package ActNext::Dancer2::REST::Role::Event::Treasurer;
 
 =head1 NAME
 
-Act::Dancer2::REST::Role::Event::Treasurer
+ActNext::Dancer2::REST::Role::Event::Treasurer
 
 The C<Treasurer> role provides an interface for those that need to be capable
 of inserting payments manually

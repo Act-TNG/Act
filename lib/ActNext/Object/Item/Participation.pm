@@ -1,10 +1,10 @@
-package Act::Next::Object::Participation;
+package ActNext::Object::Item::Participation;
 
 use Moo;
 
-use constant _RESOURCE_DATASTORE => 'Act::Next::DataStore::Participation';
+use constant _RESOURCE_DATASTORE => 'ActNext::Object::DataStore::Participation';
 
-extends "Act::Next::Object";
+extends "ActNext::Object::Item";
 
 has '_proxy' => (
   is            => 'ro',

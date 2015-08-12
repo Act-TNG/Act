@@ -1,8 +1,8 @@
-package Act::Dancer2::REST::Role::Event::Anonymous;
+package ActNext::Dancer2::REST::Role::Event::Anonymous;
 
 =head1 NAME
 
-Act::Dancer2::REST::Role::Event::Anonymous
+ActNext::Dancer2::REST::Role::Event::Anonymous
 
 The C<Anonymous> role provides an interface for all ClientUsers
 
@@ -62,6 +62,12 @@ sub export_participations_for_event {
         ->export({conf_id => $hndl->resource_root->{_act_conf_id}})
 };
 
+sub coming_up {
+    my $hndl = shift;
+    $hndl->api
+        ->resource('Talks')
+        ->coming_up_for_event({conf_id => $hndl->resource_root->{_act_conf_id}})
+};
 
 1;
 

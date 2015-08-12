@@ -1,8 +1,8 @@
-package Act::Dancer2::REST::Role::Event::Suspected;
+package ActNext::Dancer2::REST::Role::Event::Suspected;
 
 =head1 NAME
 
-Act::Dancer2::REST::Role::Event::Suspected
+ActNext::Dancer2::REST::Role::Event::Suspected
 
 The C<Anonymous> role provides an interface for all ClientUsers
 

@@ -1,8 +1,8 @@
-package Act::Dancer2::REST::Role::Resource::Authentic;
+package ActNext::Dancer2::REST::Role::Resource::Authentic;
 
 =head1 NAME
 
-Act::Dancer2::REST::Role::Resource::Authentic
+ActNext::Dancer2::REST::Role::Resource::Authentic
 
 The C<Authentic> role provides an interface for all ClientUsers
 

@@ -1,4 +1,4 @@
-package Act::Dancer2::Plugin::HTTP::Auth;
+package ActNext::Dancer2::Plugin::HTTP::Auth::ActNext;
 
 use warnings;
 use strict;
@@ -23,7 +23,7 @@ use constant HTTP_REQUIRE_ANY   => '_ANY_';
 use constant HTTP_REQUIRE_ALL   => '_ALL_';
 use constant HTTP_REQUIRE_ONE   => '_ONE_';
 
-use Act::Dancer2::Handler;
+use ActNext::Dancer2::Handler;
 
 use List::Util;
 
@@ -33,7 +33,7 @@ on_plugin_import {
         name => 'before',
         code => sub { 
             my $app = shift;
-            my $handler = Act::Dancer2::Handler
+            my $handler = ActNext::Dancer2::Handler
                 ->new_from_http_request($dsl->request);
             $dsl->vars->{http_auth_handler} = $handler;
         },

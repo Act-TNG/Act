@@ -1,8 +1,8 @@
-package Act::Dancer2::Handler::ClientUser;
+package ActNext::Dancer2::Handler::ClientUser;
 
 =head1 NAME
 
-Act::Dancer2::Handler::ClientUser
+ActNext::Dancer2::Handler::ClientUser
 
 The user object that represents the 'user' from the api.
 
@@ -38,7 +38,7 @@ has client_password => (
 
 has _act_user => (
     is                  => 'ro',
-#   isa                 => 'Act::Schema::Result::User',
+#   isa                 => 'ActNext::Schema::Result::User',
 );
 
 sub new_from_http_request {
@@ -61,7 +61,7 @@ sub new_from_http_request {
             _act_user       => undef,
         });
         Role::Tiny->apply_roles_to_object($client_user,
-            ('Act::Dancer2::Handler::ClientUser::Role::Anonymous'));
+            ('ActNext::Dancer2::Handler::ClientUser::Role::Anonymous'));
         return $client_user;
     }
     
@@ -78,7 +78,7 @@ sub new_from_http_request {
             _act_user       => undef,
         });
         Role::Tiny->apply_roles_to_object($client_user,
-            ('Act::Dancer2::Handler::ClientUser::Role::Suspected'));
+            ('ActNext::Dancer2::Handler::ClientUser::Role::Suspected'));
         return $client_user;
     }
     else { # Apparently... a authenticated user
@@ -88,7 +88,7 @@ sub new_from_http_request {
             _act_user       => $act_user,
         });
         Role::Tiny->apply_roles_to_object($client_user,
-            ('Act::Dancer2::Handler::ClientUser::Role::Authenticated'));
+            ('ActNext::Dancer2::Handler::ClientUser::Role::Authenticated'));
         return $client_user;
     }
     

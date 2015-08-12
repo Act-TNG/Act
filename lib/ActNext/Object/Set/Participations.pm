@@ -1,9 +1,9 @@
-package Act::Next::Set::Participations;
+package ActNext::Object::Set::Participations;
 
 use Moo;
 
-use constant _RESOURCE_DATASTORE => 'Act::Next::DataStore::Participations';
+use constant _RESOURCE_DATASTORE => 'ActNext::Object::DataStore::Participations';
 
-extends "Act::Next::Set";
+extends "ActNext::Object::Set";
 
 1;

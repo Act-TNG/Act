@@ -1,10 +1,10 @@
-package Act::Dancer2::Handler::ResourceRoot::Role::Resource;
+package ActNext::Dancer2::Handler::ResourceRoot::Role::Resource;
 
 =head1 NAME
 
-Act::Dancer2::Handler::ResourceRoot::Role::Resource
+ActNext::Dancer2::Handler::ResourceRoot::Role::Resource
 
-the role that provides the attribute for a C<Act::Dancer2::RootResource>.
+the role that provides the attribute for a C<ActNext::Dancer2::RootResource>.
 This role is intended to be consumed dynamicly at instantion time.
 
 Resources are those that represent root objects or

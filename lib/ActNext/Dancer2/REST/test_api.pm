@@ -1,7 +1,7 @@
-package Act::Dancer2::REST::handler;
-
+package ActNext::Dancer2::REST::test_api;
+print "HELP\n";
 use Dancer2;
-use Act::Dancer2::Plugin::HTTP::Auth;
+use ActNext::Dancer2::Plugin::HTTP::Auth::ActNext;
 
 get '/users/?'
     => http_require_task 'export_user' => sub {
