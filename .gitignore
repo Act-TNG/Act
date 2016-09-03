@@ -15,4 +15,11 @@ wwwdocs/
 inc/
 *.bak
 *.old
+*.log
+var
+wwwdocs
+actdocs
+git
+github-hook
+conf
 Act-*.tar.gz
