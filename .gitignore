@@ -10,8 +10,6 @@ actdocs/
 wwwdocs/
 .*~
 # vi/vim swap file
-*.swp
-*.swo
 inc/
 *.bak
 *.old
@@ -22,4 +20,5 @@ actdocs
 git
 github-hook
 conf
+*.sw[p-z]
 Act-*.tar.gz
