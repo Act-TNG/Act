@@ -111,7 +111,7 @@ sub check_login {
     catch {
         my $env = $req->env;
 
-        my $error = ref $_ eq 'ARRAY' ? $_->[0] : $_;
+        my $error = (ref $_ eq 'ARRAY' ) ? $_->[0] : $_;
         my $full_error = join ' ', map { "[$_]" }
             $env->{HTTP_HOST},
             $req->address,
