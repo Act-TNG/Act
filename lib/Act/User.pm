@@ -444,8 +444,10 @@ sub check_password {
     if ($scheme eq 'MD5') {
         my $digest = Digest::MD5->new;
         $digest->add(lc $check_pass);
-        $digest->b64digest eq $hash
-            or die 'Bad password';
+        my $digest_hash = $digest->b64digest;
+        die 'Bad password' unless ($digest_hash eq $hash);
+        # $digest_hash eq $hash
+        #     or die 'Bad password xxxx';
         # upgrade hash
         $self->set_password($check_pass);
     }
