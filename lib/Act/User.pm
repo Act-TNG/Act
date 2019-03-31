@@ -36,7 +36,7 @@ our %sql_mapping = (
     map( { ($_, "(lower(u.$_)=lower(?))") }
       qw( first_name last_name) ),
     # user can have multiple entries in pm_group
-    pm_group => "position(? in u.pm_group) > 0",
+    pm_group => "position(lower(?) in lower(u.pm_group)) > 0",
     # standard stuff
     map( { ($_, "(u.$_=?)") }
       qw( user_id session_id login email country ) )
@@ -115,7 +115,34 @@ sub talks {
     my ($self, %args) = @_;
     return Act::Talk->get_talks( %args, user_id => $self->user_id );
 }
-
+sub register_participation {
+  my ( $self ) = @_;
+  
+  my $sth = $Request{dbh}->prepare_cached(q{
+        SELECT  tshirt_size
+        FROM    participations
+        WHERE   user_id = ?
+        AND tshirt_size is not null
+        ORDER BY datetime DESC
+        LIMIT 1
+  });
+                                
+  $sth->execute( $self->user_id );
+  my ($tshirt_size) = $sth->fetchrow_array;
+  $sth->finish;
+                                
+  # create a new participation to this conference
+  $sth = $Request{dbh}->prepare_cached(q{
+        INSERT INTO participations
+          (user_id, conf_id, datetime, ip, tshirt_size)
+        VALUES  (?,?, NOW(), ?, ?)
+  });
+  
+  $sth->execute( $self->user_id, $Request{conference},
+    $Request{r}->connection->remote_ip, $tshirt_size );
+  $sth->finish();
+  $Request{dbh}->commit;
+}
 sub participation {
     my ( $self ) = @_;
     my $sth = sql('SELECT * FROM participations p WHERE p.user_id=? AND p.conf_id=?',
